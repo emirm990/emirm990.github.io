@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    
+  }
+  body {
+    margin: 0 auto;
+    /*background-image:url("https://media.giphy.com/media/LvZvInwnWDFT2/giphy.gif");*/
+    
+  }
+  main {
+    width: 100%;
+    margin: 0 auto;
+    color:white;
+    text-shadow: 2px 2px 2px black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .center {
+    text-align: center;
+    font-size: 120%;
+    width:60%;
+    margin:0 auto;
+  }
+  .container,
+  .icon {
+    width: 50%;
+  }
+  .icon {
+    text-align: center;
+  }
+  .flex-container {
+    display: flex;
+    align-items: center;
+    width:60%;
+    margin:0 auto;
+  }
+  #currentTemp,
+  #time,
+  #description {
+    width: 50%;
+    display: inline-block;
+    font-size:150%;
+  }
+  
+  #currentTemp {
+    text-align: right;
+    padding-right: 5px;
+    
+  }
+  #time {
+    float: left;
+  }
+  #description {
+    float: right;
+  }
+  
+  #weatherIcon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #CorF {
+    background-color: rgba(200, 200, 200);
+    color: blue;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  .hourlyForecast{
+    display:flex;
+    margin-top: 50px;
+    justify-content: center;
+    text-align:center;
+    flex-wrap:wrap;
+    overflow: auto;
+    width:100%;
+  }
+  div:not([class]):not([id]){
+    flex-basis:20%;
+    background-color:rgba(255,255,255, 0.1);
+    border-radius:20px;
+    margin-bottom:10px;
+  }
+  #loadMore{
+    font-size:120%;
+    font-weight: bold;
+    width:100%;
+    border:none;
+  }
+  #loadMore:hover{
+    background-color:white;
+  }
+  .loadMore{
+    text-align: center;
+  }
+  .navButton1,.navButton2{
+    border:none;
+    padding:4px;
+  }
+  .navButton1:hover,.navButton2:hover{
+    background-color:white;
+  }
+  #CorF:hover{
+    background-color: white;
+  }
+  @media only screen and (max-width: 600px) {
+    
+    .center, .flex-container {
+      width:100%;
+    }
+    #location{
+      width:100%;
+    }
+    .navButton1, .navButton2{
+      width:50%;
+      margin:0;
+      padding:0;
+    }
+    .navButton1{
+      float:left;
+    }
+    .navButton2{
+      float:right;
+    }
+    div:not([class]):not([id]){
+      flex-basis:90%;
+      background-color:rgba(255,255,255, 0.1);
+      margin-bottom:10px;
+      border-radius:10px;
+    }
+    main{
+      background-size:cover;
+    }
+  }

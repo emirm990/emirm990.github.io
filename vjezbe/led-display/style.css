@@ -1,0 +1,117 @@
+*{
+    box-sizing:border-box;
+}
+.whole{
+    display:grid;
+    grid-template-areas: 
+        "column1Top row1 column2Top"
+        "column1Top .   column2Top"
+        "column1Top .    column2Top"
+        "column1Top row2 column2Top"
+        "column1Bottom .  column2Bottom"
+        "column1Bottom .  column2Bottom"
+        "column1Bottom . column2Bottom"
+        "column1Bottom row3 column2Bottom";
+    grid-template-columns: 40px 60px 40px;
+    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px;
+    justify-items: center;
+    
+    width:140px;
+    height:200px;
+}
+.column1{
+    width:40px;
+}
+#column1Top{
+    width:40px;
+    grid-area: column1Top;
+}
+#column1Top div{
+    background-color:"rgba(255,0,0,0.1)";
+    border-radius:50%;
+    border: 1px solid black;
+    width:20px;
+    height:20px;
+    display:inline-block;
+}
+#column1Bottom{
+    width:40px;
+    grid-area: column1Bottom;
+}
+#column1Bottom div{
+    background-color:"rgba(255,0,0,0.1)";
+    border-radius:50%;
+    border: 1px solid black;
+    width:20px;
+    height:20px;
+    display:inline-block;
+}
+.column2{
+    width:40px;
+}
+#column2Top{
+    width:40px;
+    grid-area: column2Top;
+}
+#column2Top div{
+    background-color:"rgba(255,0,0,0.1)";
+    border-radius:50%;
+    border: 1px solid black;
+    width:20px;
+    height:20px;
+    display:inline-block;
+}
+#column2Bottom{
+    width:40px;
+    grid-area: column2Bottom;
+}
+#column2Bottom div{
+    background-color:"rgba(255,0,0,0.1)";
+    border-radius:50%;
+    border: 1px solid black;
+    width:20px;
+    height:20px;
+    display:inline-block;
+}
+#row1{
+    height:20px;
+    width:60px;
+    display:inline-block;
+    grid-area:row1;
+}
+#row1 div{
+    width:20px;
+    height:20px;
+    display:inline-block;
+    background-color:"rgba(255,0,0,0.1)";
+    border: 1px solid black;
+    border-radius: 50%;
+}
+#row2{
+    height:20px;
+    width:60px;
+    display:inline-block;
+    grid-area:row2;
+}
+#row2 div{
+    width:20px;
+    height:20px;
+    display:inline-block;
+    background-color:"rgba(255,0,0,0.1)";
+    border-radius: 50%;
+    border: 1px solid black;
+}
+#row3{
+    height:20px;
+    width:60px;
+    display:inline-block;
+    grid-area:row3;
+}
+#row3 div{
+    width:20px;
+    height:20px;
+    display:inline-block;
+    background-color:"rgba(255,0,0,0.1)";
+    border-radius: 50%;
+    border: 1px solid black;
+}

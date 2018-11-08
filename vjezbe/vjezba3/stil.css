@@ -1,0 +1,29 @@
+.centar {
+	text-align:center;
+}
+
+.crveni {
+	color:red;
+}
+
+#plavi{
+	background-color:blue;
+	color:white;
+}
+body {
+	color:#0A4C03;
+	background-color:#eee;
+}
+span {
+	font-size:20px;
+	font-weight:bold;
+}
+h1, h2, h3, h4, h5, h6 {
+	background-color:#EBE3C9;
+	text-decoration:underline;
+	text-transform:uppercase;
+}
+p {
+	font-family:"Calibri", "Arial";
+	font-size:125%;
+}

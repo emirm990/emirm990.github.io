@@ -1,0 +1,70 @@
+*{
+	box-sizing:border-box;
+}
+body{
+	margin:0;
+}
+main{
+	width:80%;;
+	margin:auto;
+}
+.building{
+	margin:auto;
+	width:800px;
+	height:600px;
+	background-color:#FFAF65;
+	border:1px solid black;
+	position:relative;
+	top:0;
+}
+.building div{
+	display:inline-block;
+	margin:0px;
+}
+.doors{
+	width:200px;
+	height:400px;
+	background-color:white;
+	transition:0.5s 10s ease;
+	border:1px solid black;
+	position:absolute;
+	left:200px;
+	bottom:0;
+}
+.doors2{
+	width:200px;
+	height:400px;
+	background-color:white;
+	transition:0.5s 10s ease;
+	border:1px solid black;
+	position:absolute;
+	right:200px;
+	bottom:0;
+	
+}
+.doors:hover{
+	transition:0.5s;
+	left:0px;
+}
+.doors2:hover{
+	transition:0.5s;
+	right:0px;
+}
+.under_doors1{
+	background-color:black;
+	width:200px;
+	height:400px;
+	color:white;
+	position:absolute;
+	left:200px;
+	bottom:0;
+}
+.under_doors2{
+	background-color:black;
+	width:200px;
+	height:400px;
+	color:white;
+	position:absolute;
+	right:200px;
+	bottom:0;
+}

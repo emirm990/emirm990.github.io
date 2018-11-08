@@ -1,0 +1,43 @@
+.centar {
+	text-align: center;
+}
+.crveni {
+	color: red;
+	background-image:url("suncokret.jpg");
+	background-size:3%;
+	background-repeat:repeat-y;
+}
+#plavi {
+	background-color:blue;
+	color: white;
+	background:linear-gradient(to right, red 10%, blue 90%);
+}
+body {
+	color: #0A4C03;
+	background-color: #eee;
+	background-image:url("priroda.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+span {
+	font-size: 20px;
+	font-weight: bold;
+}
+h1, h2, h3, h4, h5, h6 {
+	background-color: #EBE3C9;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+p {
+	font-size: 125%;
+	font-family: "Calibri", "Arial";
+}
+.pozadina{
+	background-image:url("suncokret.jpg");
+	background-size:7%;
+	background-position:bottom right;
+	background-repeat:no-repeat;
+}
+div{
+	background-color:rgba(255,255,255,0.3);
+}

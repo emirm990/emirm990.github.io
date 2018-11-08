@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    text-align:center;
+}
+#colors{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+#drawing_board{
+    padding:10px;
+    /*min-width:770px;*/
+   
+}
+.clickable{
+    border:1px dotted grey;
+    display:inline-block;
+    z-index:100;
+}
+.row{
+    display:block;
+    height:15px;
+    /*min-width:750px;*/
+    z-index: -100;
+}
+input:not(#color_picker){
+    color:transparent;
+    width:15px;
+    height:15px;
+}
+#settings{
+    width:200px;
+    text-align:center;
+    position:absolute;
+    left:-200px;
+    top:0;
+    background-color:rgba(125,125,125,0.5);
+    z-index:999;
+    display:block;
+    min-height:100%;
+}
+.clear-save button{
+    width:95px;
+}
+.download button{
+    width:194px;
+}
+#settings p{
+    margin:0;
+}
+#settings .grid-size{
+    margin-top:20px;
+}
+#settings span{
+    padding:10px;
+    display:inline-block;
+    width:50%;
+}
+.fa-cog{
+    position:fixed;
+    top:10px;
+    left:10px;
+    z-index:1000;
+}
+.fa-cog:hover{
+    color:rgb(62, 47, 196);
+}
+select{
+    width:40%;
+}
+#colors input:hover:not(#color_picker){
+    border-radius: 50%;
+}

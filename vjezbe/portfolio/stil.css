@@ -1,0 +1,313 @@
+:root{
+	--nav-color: #A9AFAF;
+	--body-color: #D9DFDF;
+	--main-color: #F0EADA;
+	--link-color: #DDD4C5;
+	--nav-link-color: #F5F8F1;
+}
+
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0;
+	background-color:var(--body-color);
+}
+main{
+	width:80%;
+	margin:0 auto;
+	background-color: var(--main-color);
+	padding-bottom:10px;
+	
+}
+/*navigation start*/
+nav{
+	width:100%;
+	height:25px;
+	margin:0 auto;
+	background-color: var(--nav-color);
+	position:fixed;
+	top:0;
+	z-index: 99;
+}
+nav li{
+	display:inline-block;
+	height:25px;
+	width:25%;
+}
+nav ul{
+	margin:0 auto;
+	width:80%;
+	text-align: center;
+	padding:0px;
+}
+nav a{
+	display:block;
+	line-height: 25px;
+	transition: .5s;
+	cursor: pointer;
+}
+nav a:link,nav a:visited{
+	text-decoration: none;
+	color: var(--body-color);
+}
+nav a:hover{
+	background-color:var(--main-color);
+	color: var(--nav-color);
+}
+/*navigation end*/
+/*about start*/
+#about{
+	width:100%;
+	display:grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-areas: 
+		"img about";
+	text-align: center;
+	margin:0 auto;
+	padding-top:50px;
+	padding-bottom: 50px;
+	background-color:var(--body-color);
+}
+#about img{
+	grid-area: img;
+	width:50%;
+	border-radius:40%;
+	margin:0 auto;
+}
+#about .imgOverlay{
+	grid-area: img;
+	opacity:0;
+	background-color: var(--body-color);
+	transition: .5s;
+	width:51%;
+	border-radius: 35%;
+	margin:0 auto;
+	z-index: 10;
+}
+#about .imgOverlay:hover{
+	opacity:1;
+}
+#about a{
+	position:relative;
+	top:45%;
+}
+#about p{
+	grid-area: about;
+}
+#about i:hover{
+	color:blue;
+}
+/*about end*/
+/*tooltip*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--nav-color);
+    color: var(--main-color);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+	width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+/*tooltip end*/
+#projects i{
+	padding:0 10px 0 10px;
+	color: var(--nav-color);
+}
+
+/*footer start*/
+footer{
+	text-align: center;
+	background-color: var(--nav-color);
+}
+
+/*footer end*/
+/*grid placement*/
+
+#projects{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"img1 img1 des1"
+		"img1 img1 link1"
+		"des2 img2 img2"
+		"link2 img2 img2"
+		"img3 img3 des3"
+		"img3 img3 link3"
+		"des4 img4 img4"
+		"link4 img4 img4"
+		"img5 img5 des5"
+		"img5 img5 link5"
+		"des6 img6 img6"
+		"link6 img6 img6";
+		grid-row-gap: 20px;
+		align-items: center;
+		text-align: center;
+		vertical-align: middle;
+}
+#projects{
+	padding-top:25px;
+}
+#projects a{
+	display:inline-block;
+	transition: all 1s ease-in-out;
+	border: 1px solid;
+	border-color: var(--body-color);
+	height:50%;
+	width:101%;
+	background-color: var(--body-color);
+}
+#projects a:link, #projects a:visited{
+	text-decoration: none;
+	color:var(--nav-color);
+	
+}
+#projects a:hover{
+	height:100%;
+}
+
+a p{
+	position: relative;
+	margin:0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#projects img{
+	width:100%;
+	position:relative;
+	
+	
+}
+.img1{
+	grid-area: img1;
+	right:40px;
+	box-shadow: -10px 2px 10px #A9AFAF;
+}
+.des1{
+	grid-area: des1;
+}
+.link1{
+	grid-area: link1;
+}
+
+.img2{
+	grid-area: img2;
+	left:40px;
+	box-shadow: 10px 2px 10px #A9AFAF;
+}
+.des2{
+	grid-area: des2;
+}
+.link2{
+	grid-area: link2;
+}
+
+.img3{
+	grid-area: img3;
+	right:40px;
+	box-shadow: -10px 2px 10px #A9AFAF;
+}
+.des3{
+	grid-area: des3;
+}
+.link3{
+	grid-area: link3;
+}
+
+.img4{
+	grid-area: img4;
+	left:40px;
+	box-shadow: 10px 2px 10px #A9AFAF;
+}
+.des4{
+	grid-area: des4;
+}
+.link4{
+	grid-area: link4;
+}
+
+.img5{
+	grid-area: img5;
+	right:40px;
+	box-shadow: -10px 2px 10px #A9AFAF;
+}
+.des5{
+	grid-area: des5;
+}
+.link5{
+	grid-area: link5;
+}
+
+.img6{
+	grid-area: img6;
+	left:40px;
+	box-shadow: 10px 2px 10px #A9AFAF;
+}
+.des6{
+	grid-area: des6;
+}
+.link6{
+	grid-area: link6;
+}
+/*grid placement ends*/
+
+@media only screen and (max-width: 600px){
+	main{
+		width:100%;
+	}
+	#projects{
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"img1 des1"
+			"img1 link1"
+			"des2 img2"
+			"link2 img2"
+			"img3 des3"
+			"img3 link3"
+			"des4 img4"
+			"link4 img4"
+			"img5 des5"
+			"img5 link5"
+			"des6 img6"
+			"link6 img6";	
+	}
+	.img1{
+		right:0px;
+	}
+	.img2{
+		left:0px;
+	}
+	.img3{
+		right:0px;
+	}
+	.img4{
+		left:0px;
+	}
+	.img5{
+		right:0px;
+	}
+	.img6{
+		left:0px;
+	}
+	#about{
+		width:100%;
+		grid-template-areas: 
+		"img"
+		"about";
+		grid-template-columns: 1fr;
+	}
+}

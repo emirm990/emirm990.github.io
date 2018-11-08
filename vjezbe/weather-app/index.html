@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Weather app</title>
+  <meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="JS/script.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <link rel="stylesheet" type="text/css" href="CSS/stil.css">
+</head>
+
+<body>
+  <main>
+
+    <div class="center">Local weather forecast for:<br/><br/>
+      <input type=text id="location" placeholder="Search:">
+      <button class="fas fa-search navButton1" id="search"></button>
+      <button class="far fa-compass navButton2" id="locate"></button>
+    </div><br/>
+    <div class="flex-container"><div class="icon"><img id="weatherIcon"></div>
+      <div class="container">
+        <div id="currentTemp"></div><input id="CorF" type=button value="°C"></div>
+    </div>
+    <div class="center" style="clear:both">
+      <div id="time"></div>
+      <div id="description"></div>
+    </div>
+    <div class="hourlyForecast">
+      <div >
+        <div id="weather0"></div>
+        <img id="icon0">
+        <div id="temp0"></div>
+        <div id="hour0"></div>
+      </div>
+      <div>        
+        <div id="weather1"></div>
+        <img id="icon1">
+        <div id="temp1"></div>
+        <div id="hour1"></div>
+      </div>
+      <div>        
+        <div id="weather2"></div>
+        <img id="icon2">
+        <div id="temp2"></div>
+        <div id="hour2"></div>
+      </div>
+      <div>        
+        <div id="weather3"></div>
+        <img id="icon3">
+        <div id="temp3"></div>
+        <div id="hour3"></div>
+      </div>
+      <div>
+        <div id="weather4"></div>
+        <img id="icon4">
+        <div id="temp4"></div>
+        <div id="hour4"></div>
+      </div>
+      
+    </div>
+    <div  class="loadMore">
+      <button id="loadMore" title="Load more...">Load more...</button>
+    </div>
+  </main>
+  <footer>
+    <address style="float:right; padding-right:20px;" >Made by: <a href="http//:emirmekic.sytes.net" target="_blank">Emir Mekić</a></address>
+  </footer>
+</body>
+
+</html>

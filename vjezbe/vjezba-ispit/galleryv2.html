@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="stil.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Emir Mekić - Vježba-ispit</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="emirmekic-vjezba-ispit.html">Index</a></li>
+			<li><a href="media.html">Gallery</a></li>
+			<li id="active"><a href="galleryv2.html">Gallery v2</a></li>
+		</ul>
+	</nav>
+	<main>
+	  
+		<article style="padding-bottom:10px">
+		 <h2 style="text-align:center">Cockatiel gallery</h2>
+<div class="container">
+      <div class="mySlides">
+		<div class="numbertext">1/8</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Cockatielmale.jpg"  style="width:100%">
+      </div>
+
+      <div class="mySlides">
+	  <div class="numbertext">2/8</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Cockatielfemale.jpg" alt="female cockatiel" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+	  <div class="numbertext">3/8</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Nymphicus_hollandicus_-perching_on_wires_-Australia-6a.jpg" alt="Wild cockatiels, Australia" style="width:100%">
+      </div>
+	  <div class="mySlides">
+	  <div class="numbertext">4/8</div>
+        <img src="http://progressive.netshow.ninemsn.com.au/media2/664969388001/2016/01/664969388001_4697717865001_8102103-20160111-093157-VIDEO-STILL.jpg?pubId=664969388001" alt="cockatiel cuddle" style="width:100%">
+      </div>
+	  <div class="mySlides">
+	  <div class="numbertext">5/8</div>
+        <img src="https://aviculture.co/wp-content/uploads/2017/06/2883469991_861318b97e_b-880x589.jpg" alt="cockatiel eating" style="width:100%">
+      </div>
+	  <div class="mySlides">
+	  <div class="numbertext">6/8</div>
+		<img src="http://kidszoo.org/wp-content/uploads/2016/06/IMG_8230edit-1500x630.jpg" alt="cockatiels on the tree" style="width:100%">
+	  </div>
+	    <div class="mySlides">
+		<div class="numbertext">7/8</div>
+		<img src="https://mdahlem.net/img/ozbirds/12/cockatl_3370_big.jpg" alt="cockatiel in flight" style="width:100%">
+	  </div>
+	     <div class="mySlides">
+		 <div class="numbertext">8/8</div>
+		<img src="https://i.ytimg.com/vi/27a2Mk672TM/maxresdefault.jpg" alt="cockatiel bathing" style="width:100%">
+	  </div>
+	  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	<!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+    <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Cockatielmale.jpg" style="width:100%" onclick="currentSlide(1)" alt="Male Cockatiel">
+    </div>
+    <div class="column"> 
+      <img class="demo cursor" src="https://upload.wikimedia.org/wikipedia/commons/1/13/Cockatielfemale.jpg" style="width:100%" onclick="currentSlide(2)" alt="Female Cockatiel">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Nymphicus_hollandicus_-perching_on_wires_-Australia-6a.jpg" style="width:100%" onclick="currentSlide(3)" alt="Wild cockatiels, Australia">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="http://progressive.netshow.ninemsn.com.au/media2/664969388001/2016/01/664969388001_4697717865001_8102103-20160111-093157-VIDEO-STILL.jpg?pubId=664969388001" style="width:100%" onclick="currentSlide(4)" alt="Cuddly Cockatiel">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://aviculture.co/wp-content/uploads/2017/06/2883469991_861318b97e_b-880x589.jpg" style="width:100%" onclick="currentSlide(5)" alt="Cockatiel Eating">
+    </div> 
+    <div class="column">
+      <img class="demo cursor" src="http://kidszoo.org/wp-content/uploads/2016/06/IMG_8230edit-1500x630.jpg" style="width:100%" onclick="currentSlide(6)" alt="Cockatiels on the tree">
+    </div>
+	  <div class="column">
+      <img class="demo cursor" src="https://mdahlem.net/img/ozbirds/12/cockatl_3370_big.jpg"  style="width:100%" onclick="currentSlide(7)" alt="Cockatiels in the flight">
+    </div>
+	
+	  <div class="column">
+      <img class="demo cursor" src="https://i.ytimg.com/vi/27a2Mk672TM/maxresdefault.jpg" style="width:100%" onclick="currentSlide(8)" alt="Cockatiel bathing">
+    </div>
+	</div>
+  </div>
+</div>
+		</article>
+		<!--<button class="btn-primary btn btn-block" style="background-color:#999">Video</button>
+		<article id="video" class="sakriven">
+			<iframe width="82%" height="560" src="https://www.youtube.com/embed/RbcqfIneLsc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</article>-->
+	</main>
+<script>
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+</html>

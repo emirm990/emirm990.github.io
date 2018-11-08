@@ -1,0 +1,243 @@
+#active{
+	background-color:white;
+}
+body{
+	margin:0;
+}
+nav li{
+	display:inline-block;
+	background-color:#999;
+}
+nav a{
+	display:block;
+	padding:10px 20px;
+}
+nav a:hover{
+	background-color:white;
+}
+nav a:link{
+	text-decoration:none;
+	color:black;
+}
+nav a:visited{
+	color:black;
+}
+aside a:link{
+	color:black;
+	
+}
+aside a:visited{
+	color:black;
+}
+nav ul{
+	text-align:center;
+	background-color:#777;
+	margin:0;
+	padding:0;
+}
+nav{
+	position:sticky;
+	top:0;
+	z-index:99;
+}
+aside{
+	display:inline-block;
+	float:left;
+	width:20%;
+	padding:0;
+	margin:0;
+	border-right:1px solid #777;
+	padding-top:38px;
+	position:fixed;
+	top:0px;
+	height:100%;
+	background-color:#999999;
+}
+
+section{
+	width:74%;
+	display:inline-block;
+	margin-right:10px;
+	padding:0;
+	float:right;
+}
+
+h1{
+	margin-left:10px;
+	margin:0;
+	padding-top:10px;
+}
+div.polaroid {
+	width: 30%;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom: 10px;
+	margin-right:10px;
+	float:left;
+	transition:0.5s ease;
+}
+div.container {
+	text-align: center;
+	padding: 10px 20px;
+	white-space:nowrap;
+	overflow:hidden;
+}
+div.polaroid:hover{
+	width:99%;
+}
+footer{
+	clear:both;
+	text-align:center;
+	position:sticky;
+	bottom:0;
+	background-color:#777;
+}
+
+
+#title{
+	text-align:center;
+	padding-top:10px;
+}
+* {
+    box-sizing: border-box;
+}
+#video {
+	text-align:center;
+	padding-bottom:25px;
+}
+iframe{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.sakriven{
+	display:none;
+}
+/*.dugme{
+	width:100%;
+	background-color:#999;
+	position:fixed;
+	bottom:0;
+	margin-top:20px;
+}*/
+@media screen and (max-width:999px){
+	
+}
+@media screen and (max-width:675px){
+	
+	iframe {
+		width:100%;
+		height:200px;
+	}
+	aside {
+		display:none;
+	}
+	section {
+		width:90%;
+		display:block;
+		float:none;
+		margin-left:10px;
+	}
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+div.container {
+    text-align: center;
+    padding:0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color:rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+
+}
+.prev{
+	left:0px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color:white;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 20px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #444;
+  padding: 2px 16px;
+  color: white;
+  opacity:1;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 12.5%;
+}
+.column img{
+	object-fit:cover;
+	height:100px;
+}
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.mySlides img{
+	height:auto;
+	object-fit:cover;
+}

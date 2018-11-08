@@ -1,0 +1,13 @@
+background-image:url("https://media.giphy.com/media/dI3D3BWfDub0Q/giphy.gif"); -rain
+
+https://media.giphy.com/media/iN6lLmUb8exMI/giphy.gif -thunderstorm
+
+https://media.giphy.com/media/LvZvInwnWDFT2/giphy.gif -drizzle
+
+https://media.giphy.com/media/N7ZiLbtDr84Yo/giphy.gif -snow
+
+https://media.giphy.com/media/l2Je9dUI5LpzfHGTe/giphy.gif -mist
+
+https://media.giphy.com/media/l0Iy2x1FicLn45JGE/giphy.gif -clear sky
+
+https://media.giphy.com/media/26gs9uFoZBYzTdarC/giphy.gif -cloudy

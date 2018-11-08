@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML i CSS</title>
+<link rel="stylesheet" type="text/css" href="mojstil.css"/>
+</head>
+<body>
+<nav>
+	<a href="#bih">Bosna i Hercegovina</a>
+	<a href="#historija">Historija</a>
+	<a href="#politika">Politika</a>
+	<a href="#geografija">Geografija</a>
+	<a href="#privreda">Privreda</a>
+	<a href="#sport">Sport</a>
+</nav>
+
+<header>
+	<h1 id="bih" onclick="goBack()">Bosna i Hercegovina</h1>
+
+<script>
+	function goBack() {
+		window.history.back();
+	}
+</script>
+</header>
+
+<main>
+	<h3>Audio</h3>
+	<audio controls autoplay loop>
+		<source src="materijali/happy_music.mp3" type="audio/mpeg">
+	</audio>
+	<h3>Video</h3>
+	<video width="50%" height="269" controls loop>
+		<source src="materijali/passengers_trailer.mp4" type="video/mp4">	
+	</video>
+	<iframe width="49%" height="269" src="https://www.youtube.com/embed/GqAMjthk1b4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<h3>Kontaktna forma</h3>
+	<form>
+		Ime i Prezime <br/>
+		<input type="text" placeholder="Ime i Prezime"><br/><br/>
+		Naslov poruke <br/>
+		<input type="text" placeholder="Problem sa autom"><br/><br/>
+		E-mail adresa <br/>
+		<input type="text" placeholder="primjer@nesto.com"><br/><br/>
+		Izaberi datum: <br/>
+		<input type="date"><br><br/>
+		Koje auto vozite? 
+		<select name="auta">
+			<option value="Audi">Audi</option>
+			<option value="BMW">BMW</option>
+			<option value="Mercedes">Mercedes</option>
+			<option value="Volvo">Volvo</option>
+			<option value="VW">VW</option>
+			<option value="Fiat">Fiat</option>
+		</select><br/><br/>
+		Poruka: <br/>
+		<textarea placeholder="Mjesto za upis poruke." rows="10" cols="30"></textarea><br/><br/>
+		Spol: 
+		<input type="radio" name="spol">Muško
+		<input type="radio" name="spol">Žensko <br/><br/>
+		<input type="submit" value="Pošalji">
+	</form>
+</main>
+
+<aside>
+	<h1><a href="#bih">Bosna i Hercegovina</a></h1>
+	<hr/>
+	<h2><a href="#historija">Historija</a></h2>
+	<h3><a href="#nova_era">Nova era</a></h3>
+	<h3><a href="#srednji_vijek">Srednji vijek</a></h3>
+	<h3><a href="#samostalnost">Samostalnost</a></h3>
+	<hr/>
+	<h2><a href="#politika">Politika</a></h2>
+	<h3><a href="#predsjednistvo">Predsjedništvo</a></h3>
+	<h3><a href="#skupstina">Skupština</a></h3>
+	<h3><a href="#vijece_ministara">Vijeće ministara</a></h3>
+	<h3><a href="#ustavni_sud">Ustavni sud</a></h3>
+	<hr/>
+	<h2><a href="#geografija">Geografija</a></h2>
+	<h3><a href="#polozaj">Položaj</a></h3>
+	<h3><a href="#geografske_cjeline">Geografske cjeline</a></h3>
+	<hr/>
+	<h2><a href="#privreda">Privreda</a></h2>
+	<hr/>
+	<h2><a href="#sport">Sport</a></h2>
+</aside>
+<footer>
+	<div class="gornji-footer">
+		<div class="a">
+			<div class="x">
+				<h4>Sitemap</h4>
+				<ol start="10" type="I">
+					<li><a href="#bih">Bosna i Hercegovina</a></li>
+					<li><a href="#historija">Historija</a></li>
+					<li><a href="#politika">Politika</a></li>
+					<li><a href="#geografija">Geografija</a></li>
+					<li><a href="#privreda">Privreda</a></li>
+					<li><a href="#sport">Sport</a></li>
+				</ol>
+			</div>
+			<div class="y">
+				<h4>O nama</h4>
+				<p>Bosna i Hercegovina (skr. BiH, neformalno Bosna) je suverena država u jugoistočnom dijelu Evrope, smještena na zapadu Balkanskog poluostrva.</p>
+				<ul>
+					<li><a href="#">O nama</a></li>
+					<li><a href="#">Wikipedia</a></li>
+					<li><a href="#">Kontakt</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="b">
+			<h4>Mapa</h4>
+			<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.787923473594!2d18.3439466!3d43.83949510000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c980e9e33459%3A0xa6bc6df2d4baa728!2sKulturni+centar+Kralj+Fahd!5e0!3m2!1sbs!2sba!4v1524568358903" width="100%" height="125" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+		</div>
+	</div>
+	<div class="donji-footer">
+		<p>Informacije preuzete sa <a href="https://bs.wikipedia.org/wiki/Bosna_i_Hercegovina">wikipedie</a> &copy;.</p>
+	</div>
+</footer>
+
+</body>
+</html>

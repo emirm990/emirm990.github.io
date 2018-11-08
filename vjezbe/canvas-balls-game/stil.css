@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+canvas {
+    border: 1px solid black;
+  
+}
+body {
+    margin:0 auto;
+    text-align: center;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.settings p{
+    display:inline;
+    width:40%;
+    margin:0;
+}
+.settings p span{
+    white-space: nowrap;
+    overflow: auto;
+}
+.settings input{
+    width:40px;
+}
+#hidden{
+    display:none;
+    position:fixed;
+    width:500px;
+    height:200px;
+}

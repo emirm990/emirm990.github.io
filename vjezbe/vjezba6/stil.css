@@ -1,0 +1,21 @@
+#slika {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+#logo {
+	top:0;
+	right: 0;
+	position: fixed;
+}
+.lijevo {
+	float: left;
+	width: 55px;
+}
+.ocisti_lijevo {
+	clear: left;
+}
+h1 {
+	text-align:center;
+}

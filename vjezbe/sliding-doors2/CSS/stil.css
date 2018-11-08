@@ -1,0 +1,94 @@
+*{
+	box-sizing:border-box;
+}
+body{
+	margin:0;
+}
+main{
+	width:80%;;
+	margin:auto;
+}
+.building{
+	margin:auto;
+	width:100%;
+	height:600px;
+	background-color: #FFAF65;
+	border:1px solid black;
+	position:relative;
+	top:0;
+}
+.building div{
+	display:inline-block;
+	margin:0px;
+}
+.doors{
+	width:20%;
+	height:400px;
+	background-image:url("../IMG/door.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	transition:0.5s 10s ease;
+	border:5px solid grey;
+	position:absolute;
+	left:31%;
+	bottom:0;
+	opacity:0.8;
+	filter:blur(1px);
+}
+.doors2{
+	width:20%;
+	height:400px;
+	background-color:white;
+	transition:0.5s 10s ease;
+	border:5px solid grey;
+	position:absolute;
+	right:31%;
+	bottom:0;
+	background-image:url("../IMG/door.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	opacity:0.8;
+	filter:blur(1px);
+}
+.doors:hover{
+	transition:0.5s;
+	left:11%;
+}
+.doors2:hover{
+	transition:0.5s;
+	right:11%;
+}
+.under_doors1{
+	background-color:black;
+	width:20%;
+	height:400px;
+	color:white;
+	position:absolute;
+	left:31%;
+	bottom:0;
+	text-align:center;
+}
+.under_doors2{
+	background-color:black;
+	width:20%;
+	height:400px;
+	color:white;
+	position:absolute;
+	right:31%;
+	bottom:0;
+	text-align:center;
+}
+.under_doors2 img{
+	width:100%;
+	height:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+	size:cover;
+}
+.building a:link{
+	color:white;
+}
+.building a:visited{
+	color:white;
+}

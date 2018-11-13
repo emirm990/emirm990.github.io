@@ -9,13 +9,19 @@
 	<title>Emir Mekić - Portfolio</title>
 <head>
 <body>
-	<nav>
-		<ul>
-			<li><a id="toAbout2" href="index.html#about">about</a></li>
-			<li><a id="toProjects" href="index.html#projects" >projects</a></li>
-			<li><a id="toContact" href="index.html#contact" >contact</a></li>
+    <button id="nav-expand">
+        <span class="button-text">|</span>
+        <span class="button-text">|</span>
+        <span class="button-text">|</span>
+    </button>
+	<nav id="navigation">
+		<ul id="nav-ul">
+			<li><a href="index.html#about">about</a></li>
+			<li><a href="index.html#projects" >projects</a></li>
+			<li><a href="index.html#contact" >contact</a></li>
 			<li><a href="practice.html">practice</a></li>
-		</ul>
+        </ul>
+        <div id="progressBar"></div>
 	</nav>
 	<main>
         <div class="practice-about">
@@ -83,8 +89,9 @@
 			<div>Feel free to contact me at: <a href="mailto:emir.mekic@live.com">emir.mekic@live.com</a></div>
 			<div>Made by:<a href="https://www.facebook.com/mekic.emir" target="_blank"> Emir Mekić</a></div>
 		</address>
-	</footer>
-	<script>
+    </footer>
+    <script src="index.js"></script>
+	<!--<script>
 		let contact = document.getElementById("contact");
 		let projects = document.getElementById("projects");
 		let about = document.getElementById("about");
@@ -97,6 +104,6 @@
 		document.getElementById("toAbout2").addEventListener("click", function(){
 			about.scrollIntoView({behavior: "smooth"});
 		});
-	</script>
+	</script>-->
 </body>
 </html>

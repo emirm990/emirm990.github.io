@@ -10,13 +10,19 @@
 	<title>Emir Mekić - Portfolio</title>
 <head>
 <body>
-	<nav>
-		<ul>
+	<button id="nav-expand">
+		<span class="button-text">|</span>
+		<span class="button-text">|</span>
+		<span class="button-text">|</span>
+	</button>
+	<nav id="navigation">
+		<ul id="nav-ul">
 			<li><a id="toAbout2" >about</a></li>
 			<li><a id="toProjects" >projects</a></li>
 			<li><a id="toContact" >contact</a></li>
 			<li><a href="practice.html">practice</a></li>
 		</ul>
+		<div id="progressBar"></div>
 	</nav>
 	
 		<div id="about">
@@ -96,5 +102,6 @@
 			about.scrollIntoView({behavior: "smooth"});
 		});
 	</script>
+	<script src="index.js"></script>
 </body>
 </html>

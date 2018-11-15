@@ -69,8 +69,13 @@ ul span{
 	width:0%;
 	background-color: green;
 }
+
 /*navigation end*/
 /*about start*/
+.fa-github{
+	font-size: 300%;
+	line-height: 0.3;
+}
 #about{
 	width:100%;
 	display:grid;
@@ -384,6 +389,9 @@ a p{
 	}
 	#projects a{
 		height: 100%;
+	}
+	#projects a:hover{
+		height: 200%;
 	}
 	#projects img{
 		border-bottom: 1px solid black;

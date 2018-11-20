@@ -1,0 +1,40 @@
+#breathe{
+    width: 10vw;
+    height: 10vw;
+    margin: 0 auto;
+    border-radius: 0%;
+    background-color: blue;
+    position: relative;
+    top:20vh;
+}
+
+#breathe:hover{
+    animation-name: breathe-in;
+    animation-duration: 4s;
+    animation-play-state: running;
+}
+
+
+@keyframes breathe-in{
+    0%{
+        border-radius: 0%;
+        background-color: blue;
+        transform: rotate(0deg);
+    }
+    25%{
+       border-radius: 50%;
+   }
+   50%{
+       border-radius: 25%;
+       box-shadow: 11vw 0px green,-11vw 0px yellow,0px 11vw red, 0px -11vw orange;
+       background-color: purple;
+   }
+   75%{
+       border-radius: 50%;
+   }
+   100%{
+       border-radius: 0;
+       transform: rotate(360deg);
+   }
+}
+

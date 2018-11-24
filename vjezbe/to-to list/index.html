@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    <title>Our To-do list</title>
+</head>
+<body>
+    <main>
+        <div id="firebaseui-auth-container">
+            <div>
+                <h1 class="center">Our To-Do List</h1>
+            </div>
+            <div class="center">
+                <input id="email" type="text" placeholder="e-mail">
+                <input id="password" type="password" placeholder="Password">
+                <button id="login" class="button">Login</button>
+            </div>
+        </div>
+        <div>
+            <input id="todo_item" type="text" placeholder="Enter your text here">
+            <button id="confirm_item">Post</button>
+        </div>
+        <div>
+            <ul id="list">
+
+            </ul>
+        </div>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCNocLpFFlQ7EMsKbgUZMmEPvQqug2Vk9M",
+            authDomain: "to-do-5b78c.firebaseapp.com",
+            databaseURL: "https://to-do-5b78c.firebaseio.com",
+            projectId: "to-do-5b78c",
+            storageBucket: "",
+            messagingSenderId: "202666491304"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -90,9 +90,10 @@ ul span{
 }
 #about img{
 	grid-area: img;
-	width:50%;
-	border-radius:40%;
+	border-radius: 5px;
 	margin:0 auto;
+	max-width: 50%;
+	height: auto;
 }
 #about .imgOverlay{
 	grid-area: img;
@@ -100,7 +101,7 @@ ul span{
 	background-color: var(--body-color);
 	transition: .5s;
 	width:51%;
-	border-radius: 35%;
+	border-radius: 5px;
 	margin:0 auto;
 	z-index: 10;
 }
@@ -376,6 +377,9 @@ a p{
 		"img"
 		"about";
 		grid-template-columns: 1fr;
+	}
+	#about img{
+		max-width: 20%;
 	}
 	.divider{
 		padding-bottom: 50px;

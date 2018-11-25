@@ -107,3 +107,10 @@ body{
         display: none;
     }
 }
+@media only screen and (max-width: 430px){
+    .input{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

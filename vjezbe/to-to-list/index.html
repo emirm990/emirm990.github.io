@@ -10,24 +10,28 @@
 </head>
 <body>
     <main>
-        <div id="firebaseui-auth-container">
+        <div class="top-container">
             <div>
                 <h1 class="center">Our To-Do List</h1>
             </div>
-            <div class="center">
-                <input id="email" type="text" placeholder="e-mail">
-                <input id="password" type="password" placeholder="Password">
-                <button id="login" class="button">Login</button>
+            <div id="login-container" class="center">
+                <input id="email" type="text" placeholder="e-mail" class="input">
+                <input id="password" type="password" placeholder="Password" class="input">
+                <button id="login" class="button login--button">Login</button>
+            </div>
+            <div id="logout-container" class="center">
+                <div><span>Welcome: </span><span id="username-container"></span></div>
+                <button id="logout" class="button logout--button">Logout</button>
             </div>
         </div>
-        <div>
-            <input id="todo_item" type="text" placeholder="Enter your text here">
-            <button id="confirm_item">Post</button>
+        <div class="input-container">
+            <input id="todo_item" type="text" placeholder="Enter your text here" class="input">
+            <button id="confirm_item" class="button post--button">Post</button>
         </div>
-        <div>
-            <ul id="list">
+        <div class="list-container">
+            <ol id="list">
 
-            </ul>
+            </ol>
         </div>
     </main>
     <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>

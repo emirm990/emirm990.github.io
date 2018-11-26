@@ -11,6 +11,10 @@ body{
 *{
     box-sizing: border-box;
 }
+.h1{
+    color: rgb(117, 118, 119);
+    font-size: 3em;
+}
 .center{
     text-align: center;
 }
@@ -93,6 +97,7 @@ body{
 .remove{
     float:right;
 }
+
 .top-container{
     background-color: rgba(162,163,165,0.2);
     padding: 10px;

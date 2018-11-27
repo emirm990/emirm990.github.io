@@ -1,4 +1,3 @@
-
 let list = document.getElementById("list");
 let remove = document.getElementsByClassName("remove");
 let key = document.getElementsByClassName("key");
@@ -19,12 +18,14 @@ let formatedDate =
   "." +
   currentdate.getFullYear();
 function getItems(){
+    console.log("getItems");
     list.innerHTML = "";
     fetch("https://to-do-5b78c.firebaseio.com/list.json")
             .then(response => {return response.json()})
             .then(data => {
-                for(const key in data){
-                    if (data[key].checked==true){
+                console.log(data);
+                for(const identifier in data){
+                    if (data[identifier].checked==true){
                         checkedOrNot = "checked";
                         color = "green";
                     }else {
@@ -32,14 +33,32 @@ function getItems(){
                         color = "black";
                     }
                     list.innerHTML += `<li style = "color:${color}"></>
-                    <span class="email-field">${data[key].username}</span>
-                    <span class="text-field">${data[key].item}</span>
-                    <span class="date-field">${data[key].date}</span>
-                    <span class="key">${key}</span>
+                    <span class="email-field">${data[identifier].username}</span>
+                    <span class="text-field">${data[identifier].item}</span>
+                    <span class="date-field">${data[identifier].date}</span>
+                    <span class="key">${identifier}</span>
                     <input type="checkbox" class="remove" ${checkedOrNot} input>
                     </li>`
                 }
             })
+}
+function postToDoItem(username){
+    console.log(username);
+    let item = document.getElementById("todo_item").value;
+    let checked = false;
+    console.log("clicked");
+    list.innerHTML = "";
+    fetch("https://to-do-5b78c.firebaseio.com/list.json",{
+    method: "POST",
+    body: JSON.stringify({
+        username: username,
+        item: item,
+        date: formatedDate,
+        checked: checked
+        })
+    })
+    getItems();
+    checkedColor();
 }
 login.addEventListener("click", function(){
     let email = document.getElementById("email").value;
@@ -55,14 +74,17 @@ login.addEventListener("click", function(){
 logout.addEventListener("click", function(){
     firebase.auth().signOut().then(function() {
           // Sign-out successful.
+            location.reload();
+            list.innerText = "";
+            username = null;
         }).catch(function(error) {
             alert("Error: " +error);
         });
 })
 
 firebase.auth().onAuthStateChanged(function(user) {
+    console.log("signed in: ", user);
     if (user) {
-        console.log("signed in");
         // User is signed in.
         var displayName = user.displayName;
         //var email = user.email;
@@ -71,40 +93,17 @@ firebase.auth().onAuthStateChanged(function(user) {
         var isAnonymous = user.isAnonymous;
         var uid = user.uid;
         var providerData = user.providerData;
+        let username = user.email;
         logoutContainer.style.display = "block";
         loginContainer.style.display = "none";
-        usernameContainer.innerText = user.email;
+        usernameContainer.innerText = username;
         addItem.disabled = false;
+        list.innerHTML = "";
         getItems();
         checkedColor();
-        addItem.addEventListener("click", postToDoItem);
-        function postToDoItem(){
-            let username = user.email;
-            let item = document.getElementById("todo_item").value;
-            let checked = false;
-            console.log("clicked");
-            list.innerHTML = "";
-            fetch("https://to-do-5b78c.firebaseio.com/list.json",{
-            method: "POST",
-            body: JSON.stringify({
-                username: username,
-                item: item,
-                date: formatedDate,
-                checked: checked
-                })
-            })
-            getItems();
-            //list.innerHTML += `<li>
-            //        <span class="email-field">${username}</span>
-            //        <span class="text-field">${item}</span>
-            //        <span class="date-field">${formatedDate}</span>
-            //        <span class="key">${key}</span>
-            //        <input type="checkbox" class="remove" ${checkedOrNot}></input>
-            //        </li>`;
-            checkedColor();
-            
-        }
-        
+        addItem.addEventListener("click", function(){
+            postToDoItem(username)
+        });
         list.addEventListener("click", (event) => {
             console.log(event.target);
             if(event.target.classList.contains("remove")){
@@ -130,10 +129,25 @@ firebase.auth().onAuthStateChanged(function(user) {
     } else {
       // User is signed out.
       // ...
+        //firebase.auth().signOut().then(function() {
+        //  // Sign-out successful.
+        //    list.innerText = "";
+        //    username = null;
+        //    logoutContainer.style.display = "none";
+        //    loginContainer.style.display = "block";
+        //    list.innerText = "";
+        //    addItem.disabled = true;
+        //}).catch(function(error) {
+        //    alert("Error: " +error);
+        //});
+        
+        console.log("signed out: ", user);
         logoutContainer.style.display = "none";
         loginContainer.style.display = "block";
         list.innerText = "";
         addItem.disabled = true;
+        username = null;
+        console.log(username);
     }
   });
 function checkedColor(){

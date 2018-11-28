@@ -151,10 +151,16 @@ body{
     .list-container{
         width: 100%;
     }
+    .modal-content{
+        width: 50%;
+    }
 }
 @media only screen and (max-width: 600px){
     .email-field{
         display: none;
+    }
+    .modal-content{
+        width: 100%;
     }
 }
 @media only screen and (max-width: 430px){

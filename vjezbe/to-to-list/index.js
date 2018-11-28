@@ -7,7 +7,15 @@ let addItem = document.getElementById("confirm_item");
 let loginContainer = document.getElementById("login-container");
 let logoutContainer = document.getElementById("logout-container");
 let usernameContainer = document.getElementById("username-container");
+let modal = document.getElementById("register-container");
+let signUp = document.getElementById("signup");
+let span = document.getElementsByClassName("close")[0];
+let register = document.getElementById("register");
+let emailRegister = document.getElementById("email-register");
+let passwordRegister = document.getElementById("password-register");
+let passwordCheck = document.getElementById("password-check");
 let checkedOrNot;
+let uid;
 let color = "black";
 let date = new Date();
 let currentdate = date;
@@ -17,10 +25,36 @@ let formatedDate =
   Number(currentdate.getMonth() + 1) +
   "." +
   currentdate.getFullYear();
+signUp.addEventListener("click", function(){
+    modal.style.display = "block";
+})
+span.addEventListener("click", function(){
+    modal.style.display = "none";
+})
+window.addEventListener("click", function(event){
+    if (event.target == modal){
+        modal.style.display = "none";
+    }
+})
+register.addEventListener("click", function(){
+    if (passwordCheck.value === passwordRegister.value){
+        firebase.auth().createUserWithEmailAndPassword(emailRegister.value, passwordRegister.value).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert("Error: " + errorMessage);
+            // ...
+          });
+        modal.style.display = "none";
+    }else{
+        alert("Your entered passwords must match!");
+    }
+      
+})
 function getItems(){
     console.log("getItems");
     list.innerHTML = "";
-    fetch("https://to-do-5b78c.firebaseio.com/list.json")
+    fetch("https://to-do-5b78c.firebaseio.com/list/" + uid + ".json")
             .then(response => {return response.json()})
             .then(data => {
                 console.log(data);
@@ -48,7 +82,7 @@ function postToDoItem(username){
     let checked = false;
     console.log("clicked");
     list.innerHTML = "";
-    fetch("https://to-do-5b78c.firebaseio.com/list.json",{
+    fetch("https://to-do-5b78c.firebaseio.com/list/" + uid + ".json",{
     method: "POST",
     body: JSON.stringify({
         username: username,
@@ -91,7 +125,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         var emailVerified = user.emailVerified;
         var photoURL = user.photoURL;
         var isAnonymous = user.isAnonymous;
-        var uid = user.uid;
+        uid = user.uid;
         var providerData = user.providerData;
         let username = user.email;
         logoutContainer.style.display = "block";
@@ -99,6 +133,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         usernameContainer.innerText = username;
         addItem.disabled = false;
         list.innerHTML = "";
+        console.log("uid: ", uid);
         getItems();
         checkedColor();
         addItem.addEventListener("click", function(){
@@ -111,12 +146,12 @@ firebase.auth().onAuthStateChanged(function(user) {
                 console.log(target);
                 function writeUserData(target) {
                     if (event.target.checked){
-                        firebase.database().ref('list/' + target.innerText).update({
+                        firebase.database().ref('list/' + uid + "/" + target.innerText).update({
                         checked: true
                     });
                     event.target.parentElement.style.color = "green";
                     }else {
-                        firebase.database().ref('list/' + target.innerText).update({
+                        firebase.database().ref('list/' + uid + "/" + target.innerText).update({
                             checked: false
                         });
                         event.target.parentElement.style.color = "black";

@@ -14,6 +14,8 @@ let register = document.getElementById("register");
 let emailRegister = document.getElementById("email-register");
 let passwordRegister = document.getElementById("password-register");
 let passwordCheck = document.getElementById("password-check");
+let verifyEmail = document.getElementById("verify");
+let emailVerificationMessage = document.getElementById("email-verification-message");
 let checkedOrNot;
 let uid;
 let color = "black";
@@ -99,6 +101,13 @@ function postToDoItem(username){
     getItems();
     checkedColor();
 }
+function clearMessage(){
+    emailVerificationMessage.innerText = "E-mail sent, please check junk/spam folder.";
+    emailVerificationMessage.style.color = "green";
+    setTimeout(function(){
+        emailVerificationMessage.innerText = "";
+    }, 10000);
+}
 login.addEventListener("click", function(){
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
@@ -138,7 +147,26 @@ firebase.auth().onAuthStateChanged(function(user) {
         usernameContainer.innerText = username;
         addItem.disabled = false;
         list.innerHTML = "";
-        console.log("uid: ", uid);
+        console.log("email verified: ", emailVerified);
+        if (emailVerified){
+            verifyEmail.style.display = "none";
+            addItem.innerText = "Post";
+            addItem.disabled = false;
+        }else{
+            verifyEmail.style.display = "inline-block";
+            addItem.disabled = true;
+            addItem.innerText = "Verify email first";
+            addItem.style.color = "black";
+        }
+        verifyEmail.addEventListener("click", function(){
+            user.sendEmailVerification().then(function() {
+                console.log("email sent");
+                clearMessage()
+              }).catch(function(error) {
+                // An error happened.
+                alert("Error: ", error);
+              });
+        })
         getItems();
         checkedColor();
         addItem.addEventListener("click", function(){

@@ -11,6 +11,9 @@ body{
 *{
     box-sizing: border-box;
 }
+#email-verification-message{
+    margin-top: 20px;
+}
 .h1{
     color: rgb(117, 118, 119);
     font-size: 3em;
@@ -42,6 +45,9 @@ body{
     background-color: white;
     border-color: var(--logout-button-color);
     color: var(--logout-button-color);
+}
+.signup--button:hover, .register--button:hover{
+    background-color: white;
 }
 .post--button{
     background-color: var(--list-bg-color);
@@ -78,11 +84,14 @@ body{
     display: inline-block;
     padding: 5px 15px;
 }
-.date-field{
-    float: right;
+.text-field{
+    word-wrap: break-word;
 }
 .email-field{
-    min-width: 35%;
+    display: none;
+}
+.date-field{
+    float:  right;
 }
 #list li{
     border-bottom: 1px solid var(--list-bg-color);

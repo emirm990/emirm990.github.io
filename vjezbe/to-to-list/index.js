@@ -78,7 +78,7 @@ function getItems(){
 }
 function postToDoItem(username){
     console.log(username);
-    let item = document.getElementById("todo_item").value;
+    let item = document.getElementById("todo_item");
     let checked = false;
     console.log("clicked");
     list.innerHTML = "";
@@ -86,11 +86,16 @@ function postToDoItem(username){
     method: "POST",
     body: JSON.stringify({
         username: username,
-        item: item,
+        item: item.value,
         date: formatedDate,
         checked: checked
         })
+    }).then (function(response){
+        if(response.status == 200){
+            item.value = "";
+        }
     })
+    
     getItems();
     checkedColor();
 }

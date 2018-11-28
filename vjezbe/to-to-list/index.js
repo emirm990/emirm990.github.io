@@ -158,8 +158,12 @@ firebase.auth().onAuthStateChanged(function(user) {
             addItem.innerText = "Verify email first";
             addItem.style.color = "black";
         }
+        var actionCodeSettings = {
+            url: 'https://emirm990.github.io/vjezbe/to-to-list/index.html?email='
+            + firebase.auth().currentUser.email
+        }
         verifyEmail.addEventListener("click", function(){
-            user.sendEmailVerification().then(function() {
+            user.sendEmailVerification(actionCodeSettings).then(function() {
                 console.log("email sent");
                 clearMessage()
               }).catch(function(error) {

@@ -177,6 +177,8 @@ footer{
 		"img5 img5 des5"
 		"img5 img5 link5"
 		"end5 end5 end5"
+		"des6 img6 img6"
+		"link6 img6 img6"
 		;
 		grid-row-gap: 20px;
 		align-items: center;
@@ -312,17 +314,8 @@ a p{
 	grid-area: link6;
 }
 
-.img7{
-	grid-area: img7;
-	right:40px;
-	box-shadow: -10px 2px 10px #A9AFAF;
-}
-.des7{
-	grid-area: des7;
-}
-.link7{
-	grid-area: link7;
-}
+
+
 /*grid placement ends*/
 .practice-about{
 	padding: 100px;
@@ -344,6 +337,8 @@ a p{
 			"img4 img4"
 			"des5 link5"
 			"img5 img5"
+			"des6 link6"
+			"img6 img6"
 			;	
 	}
 	.img1{

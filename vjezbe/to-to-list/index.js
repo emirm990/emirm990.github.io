@@ -9,7 +9,10 @@ let logoutContainer = document.getElementById("logout-container");
 let usernameContainer = document.getElementById("username-container");
 let modal = document.getElementById("register-container");
 let signUp = document.getElementById("signup");
-let span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[1];
+let helpClose = document.getElementsByClassName("close")[0];
+let help = document.getElementById("help");
+let helpContainer = document.getElementById("help-container");
 let register = document.getElementById("register");
 let emailRegister = document.getElementById("email-register");
 let passwordRegister = document.getElementById("password-register");
@@ -30,12 +33,19 @@ let formatedDate =
 signUp.addEventListener("click", function(){
     modal.style.display = "block";
 })
+help.addEventListener("click", function(){
+    helpContainer.style.display = "block";
+})
+helpClose.addEventListener("click", function(){
+    helpContainer.style.display = "none";
+})
 span.addEventListener("click", function(){
     modal.style.display = "none";
 })
 window.addEventListener("click", function(event){
-    if (event.target == modal){
+    if (event.target == modal || event.target == helpContainer){
         modal.style.display = "none";
+        helpContainer.style.display = "none";
     }
 })
 register.addEventListener("click", function(){
@@ -60,6 +70,7 @@ function getItems(){
             .then(response => {return response.json()})
             .then(data => {
                 console.log(data);
+                let items = [];
                 for(const identifier in data){
                     if (data[identifier].checked==true){
                         checkedOrNot = "checked";
@@ -152,6 +163,9 @@ firebase.auth().onAuthStateChanged(function(user) {
             verifyEmail.style.display = "none";
             addItem.innerText = "Post";
             addItem.disabled = false;
+            addItem.addEventListener("click", function(){
+                postToDoItem(username)
+            });
         }else{
             verifyEmail.style.display = "inline-block";
             addItem.disabled = true;
@@ -173,9 +187,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         })
         getItems();
         checkedColor();
-        addItem.addEventListener("click", function(){
-            postToDoItem(username)
-        });
+        
         list.addEventListener("click", (event) => {
             console.log(event.target);
             if(event.target.classList.contains("remove")){

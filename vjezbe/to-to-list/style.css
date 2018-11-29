@@ -60,6 +60,36 @@ body{
 .post--button:disabled{
     opacity: 0.5;
 }
+#help{
+    transform: translateY(15%);
+}
+#help:hover{
+    transform: scaleZ(-0.2);
+    border-radius: 50%;
+    box-shadow: 0px 1px grey;
+}
+.help-content{
+    width: 80%;
+    display: inline-block;
+}
+.help-content-details{
+    width: 40%;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid black;
+}
+.--left{
+    text-align: left;
+    margin: 5px 0 5px 5px;
+    border-right: none;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.--right{
+    text-align: right;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;   
+}
 .input{
     padding: 5px 15px;;
     border-radius: 2px;

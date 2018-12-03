@@ -1,24 +1,31 @@
-let list = document.getElementById("list");
-let remove = document.getElementsByClassName("remove");
-let key = document.getElementsByClassName("key");
-let login = document.getElementById("login");
-let logout = document.getElementById("logout");
-let addItem = document.getElementById("confirm_item");
-let loginContainer = document.getElementById("login-container");
-let logoutContainer = document.getElementById("logout-container");
-let usernameContainer = document.getElementById("username-container");
-let modal = document.getElementById("register-container");
-let signUp = document.getElementById("signup");
-let span = document.getElementsByClassName("close")[1];
-let helpClose = document.getElementsByClassName("close")[0];
-let help = document.getElementById("help");
-let helpContainer = document.getElementById("help-container");
-let register = document.getElementById("register");
-let emailRegister = document.getElementById("email-register");
-let passwordRegister = document.getElementById("password-register");
-let passwordCheck = document.getElementById("password-check");
-let verifyEmail = document.getElementById("verify");
-let emailVerificationMessage = document.getElementById("email-verification-message");
+let list = domSelect("#list");//document.getElementById("list");
+let remove = domSelect(".remove"); //document.getElementsByClassName("remove");
+let key = domSelect(".key"); //document.getElementsByClassName("key");
+let login = domSelect("#login"); //document.getElementById("login");
+let logout = domSelect("#logout"); //document.getElementById("logout");
+let addItem = domSelect("#confirm_item"); //document.getElementById("confirm_item");
+let loginContainer = domSelect("#login-container"); //document.getElementById("login-container");
+let logoutContainer = domSelect("#logout-container"); //document.getElementById("logout-container");
+let usernameContainer = domSelect("#username-container");//document.getElementById("username-container");
+let modal = domSelect("#register-container"); //document.getElementById("register-container");
+let signUp = domSelect("#signup"); //document.getElementById("signup");
+let span = domSelect(".close")[1]; //document.getElementsByClassName("close")[1];
+let helpClose = domSelect(".close")[0]; //document.getElementsByClassName("close")[0];
+let help = domSelect("#help"); //document.getElementById("help");
+let helpContainer = domSelect("#help-container"); //document.getElementById("help-container");
+let register = domSelect("#register"); //document.getElementById("register");
+let emailRegister = domSelect("#email-register"); //document.getElementById("email-register");
+let passwordRegister = domSelect("#password-register"); //document.getElementById("password-register");
+let passwordCheck = domSelect("#password-check"); //document.getElementById("password-check");
+let verifyEmail = domSelect("#verify"); //document.getElementById("verify");
+let emailVerificationMessage = domSelect("#email-verification-message"); //document.getElementById("email-verification-message");
+function domSelect(element){
+    if (element.startsWith("#")){
+        return document.querySelector(element);
+    }else {
+        return document.querySelectorAll(element);
+    }
+}
 let checkedOrNot;
 let uid;
 let color = "black";
@@ -236,10 +243,8 @@ firebase.auth().onAuthStateChanged(function(user) {
   });
 function checkedColor(){
     let checkedBox = document.getElementsByClassName("remove");
-    console.log(checkedBox.length);
     if (checkedBox.checked){
-        checkedBox.parentElement.stye.color = "green";
-        
+        checkedBox.parentElement.style.color = "green";
     }
 }
 

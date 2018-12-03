@@ -161,7 +161,7 @@ body{
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 30%; /* Could be more or less, depending on screen size */
+    width: 50%; /* Could be more or less, depending on screen size */
     text-align: center;
 }
 .--modal{
@@ -188,10 +188,15 @@ body{
 
 @media only screen and (max-width: 1000px){
     .list-container{
-        width: 100%;
+        width: 80%;
     }
     .modal-content{
         width: 50%;
+    }
+}
+@media only screen and (max-width: 900px){
+    .modal-content{
+        width: 70%;
     }
 }
 @media only screen and (max-width: 600px){

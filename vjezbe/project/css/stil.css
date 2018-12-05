@@ -398,3 +398,51 @@ main{
 .active-page{
     color: var(--green) !important;
 }
+.title{
+    grid-area: hero;
+}
+.map-container{
+    grid-area: getToKnow;
+}
+.form-container{
+    grid-area: projects;
+}
+.form{
+    display: grid;
+    grid-template-areas: 
+        "title . . ."
+        "text text text text"
+        "name name . ."
+        "email email . ."
+        "subject subject . ."
+        "textarea textarea textarea textarea"
+        "formbutton . . .";
+}
+.form-title{
+    grid-area: title;
+    margin:5px 0 0 5px;
+}
+.form-text{
+    grid-area: text;
+    margin-left:5px;
+}
+.form-name{
+    grid-area: name;
+    margin: 5px;
+}
+.form-email{
+    grid-area: email;
+    margin: 5px;
+}
+.form-subject{
+    grid-area: subject;
+    margin: 5px;
+}
+.form-textarea{
+    grid-area: textarea;
+    margin: 5px;
+}
+.form-button{
+    grid-area: formbutton;
+    margin: 5px;
+}

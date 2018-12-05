@@ -244,7 +244,7 @@ iframe{
     list-style-type: none;
     padding-left: 10px;
     margin:0;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 .work-search-items{
     display: inline-block;
@@ -299,18 +299,20 @@ main{
 }
 .footer{
     grid-area: footer;
-    font-size: 0.8em;
     display: grid;
     grid-template-areas:
-        "address address nav nav"
+        "address address nav nav";
+    font-size: 0.6em;
 }
 .address{
     grid-area: address;
     justify-self: start;
+    font-size: 0.5em;
 }
 .nav{
     grid-area: nav;
     justify-self: end;
+    padding:0;
 }
 .print, .photography, .web, .applications{
     display: inline-block;

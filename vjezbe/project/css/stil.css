@@ -370,7 +370,7 @@ main{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--light-grey);
+    
 }
 .tabs div{
     width: 25%;
@@ -409,18 +409,20 @@ main{
 }
 .form{
     display: grid;
+    grid-auto-columns: 1fr;
     grid-template-areas: 
-        "title . . ."
+        "title title . ."
         "text text text text"
-        "name name . ."
-        "email email . ."
-        "subject subject . ."
+        "name name name ."
+        "email email email ."
+        "subject subject subject ."
         "textarea textarea textarea textarea"
         "formbutton . . .";
 }
 .form-title{
     grid-area: title;
-    margin:5px 0 0 5px;
+    margin-left:5px;
+    margin-bottom: 0;
 }
 .form-text{
     grid-area: text;
@@ -445,4 +447,77 @@ main{
 .form-button{
     grid-area: formbutton;
     margin: 5px;
+}
+@media (min-width: 600px){
+    iframe{
+        height: 315px;
+    }
+    #item2{
+        display: block;
+    }
+    .footer,.address{
+        font-size: 0.8em;
+    }
+    .img{
+        margin:0 auto;
+    }
+    .left-article{
+        padding-right: 10px;
+    }
+    .right-article{
+        padding-left: 10px;
+    }
+}
+@media (min-width: 900px){
+    iframe{
+        height: 500px;
+    }
+    #item3{
+        display: block;
+    }
+    .img{
+        margin: 0;
+        padding: 5px;
+    }
+    .main-article{
+        grid-template-areas: 
+            "img img text text";
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        width: 80%;
+        margin:0 auto;
+    }
+    .flex{
+        flex-direction: row;
+    }
+    .video-container{
+        flex-basis: 50%;
+    }
+    iframe{
+        height: 350px;
+    }
+    .info{
+        flex-basis: 50%;
+    }
+    #item4{
+        display: block;
+    }
+    #item5{
+        display: block;
+    }
+    .width50{
+        width:50%;
+    }
+    .tabs-container{
+        background-color: var(--light-grey);
+    }
+    .nav-list{
+        justify-content: flex-start;
+    }
+    .nav-items a{
+        padding-left:0;
+        padding-right: 50px;
+    }
 }

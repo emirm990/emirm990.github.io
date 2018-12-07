@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Contact page for front-end test project">
     <link rel="stylesheet" href="css/stil.css">
     <link rel="icon" href="img/icon.png">
-    <title>Display</title>
+    <title>Display - Contact</title>
 </head>
 <body>
     <nav class="navigation-container container">
         <div class="logo" id="logo">
             <div class="logo-container">
-                <img src="img/logo.png">
+                <img src="img/logo.png" alt="logo">
             </div> 
             <div class="icon-container">
                 <!--<img class = "icon" src="img/social-icons/twitter.svg">
@@ -68,7 +69,7 @@
         </div>
         <!-- Nisam koristio google map API, trebam postaviti način plaćanja da bih dobio API key a bez toga ne mogu postaviti ni custom marker -->
         <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d92059.68760070327!2d18.367118699999992!3d43.858621799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1shr!2sba!4v1544051872945" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe title="google map" class="google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d92059.68760070327!2d18.367118699999992!3d43.858621799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1shr!2sba!4v1544051872945" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <div class="form-container container --uppercase">
                 <form class="form font">
@@ -80,11 +81,11 @@
                         Donec tincidunt dolor et tristique bibendum. 
                         Aenean sollicitudin vitae dolor ut posuere.
                     </p>
-                    <input class="form-name" type="text" placeholder="Name" required>
-                    <input class="form-email" type="text" placeholder="Email Address" required>
-                    <input class="form-subject" type="text" placeholder="Subject">
-                    <textarea class="form-textarea" rows="8" maxlength="1000"></textarea>
-                    <button type="submit" class="form-button button --uppercase font-white">send message</button>
+                    <input class="form-name" type="text" placeholder="Name" id="name" required>
+                    <input class="form-email" type="text" placeholder="Email Address" id="email" required>
+                    <input class="form-subject" type="text" placeholder="Subject" id="subject">
+                    <textarea class="form-textarea" rows="8" maxlength="1000" id="textarea"></textarea>
+                    <button type="submit" class="form-button button --uppercase font-white" id="submit">send message</button>
                 </form>
             </div>
         <div class="center call-to-action-bottom callToAction font-white">

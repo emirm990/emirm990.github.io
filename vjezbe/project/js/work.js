@@ -32,7 +32,6 @@ function categorySearch(category){
             if(!projectsParrent.children[i].classList.contains(category)){
                 if(projectsParrent.children[i].classList.contains(category)==false){
                     categoryCount++;
-                    console.log(categoryCount, projectsParrent.children.length);
                     if(categoryCount==projectsParrent.children.length){
                        noResults.style.display = "block";
                        break;

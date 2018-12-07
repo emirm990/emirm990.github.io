@@ -1,8 +1,8 @@
-let picture1 = 'url("../img/carousel/project-jezik.png")';
-let picture2 = 'url("../img/carousel/project-boy-and-girl.png")';
-let picture3 = 'url("../img/carousel/project-buttons.png")';
-let picture4 = 'url("../img/carousel/project-social-media.png")';
-let picture5 = 'url("../img/carousel/project-jes.png")';
+let picture1 = 'url("img/carousel/project-jezik.jpg")';
+let picture2 = 'url("img/carousel/project-boy-and-girl.jpg")';
+let picture3 = 'url("img/carousel/project-buttons.jpg")';
+let picture4 = 'url("img/carousel/project-social-media.jpg")';
+let picture5 = 'url("img/carousel/project-jes.jpg")';
 
 let pictureArray = [picture1, picture2, picture3, picture4, picture5];
 console.log(pictureArray);
@@ -27,7 +27,27 @@ let animatedButton = document.querySelector(".--animated-button");
 
 let animatedText = document.querySelector(".--animated-text");
 
+// Get the modal
+let modal = document.getElementById('myModal');
+let modalVideo = document.getElementById("modal-video");
 
+// Get the button that opens the modal
+let openModal = document.getElementById("open-video");
+
+// When the user clicks on the button, open the modal 
+modal.addEventListener("click", function(){
+    modalVideo.attributes.src = null;
+})
+openModal.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 function animation(){
     devices.style.animationName = "devices";
     setTimeout(function(){
@@ -56,7 +76,6 @@ function changeImg(arg){
         if (count5 < 4){
             count5++
         }else (count5=0)
-        console.log(count, count2, count3, count4, count5);
         item1.style.backgroundImage = pictureArray[count];
         item2.style.backgroundImage = pictureArray[count2];
         item3.style.backgroundImage = pictureArray[count3];
@@ -78,7 +97,6 @@ function changeImg(arg){
         if (count5 > 0){
             count5--;
         }else (count5=4)
-        console.log(count, count2, count3, count4, count5);
         item1.style.backgroundImage = pictureArray[count];
         item2.style.backgroundImage = pictureArray[count2];
         item3.style.backgroundImage = pictureArray[count3];

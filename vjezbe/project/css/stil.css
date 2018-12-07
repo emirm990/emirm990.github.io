@@ -486,7 +486,10 @@ main{
         "email email email ."
         "subject subject subject ."
         "textarea textarea textarea textarea"
-        "formbutton . . .";
+        "formbutton recaptcha . .";
+}
+.g-recaptcha{
+    grid-area: recaptcha;
 }
 .form-title{
     grid-area: title;

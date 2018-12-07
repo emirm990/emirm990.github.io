@@ -78,7 +78,7 @@ main{
     padding: 20px;
 }
 .section{
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 .button{
     background-color: var(--green);
@@ -109,54 +109,85 @@ iframe{
     position: relative;
 }
 .carousel-controls{
+    padding-top:25px;
+    display:flex;
+    align-items: center;
     margin:0 auto;
     width: 100%;
     text-align: center;
-    font-size: 2em;
-    position: absolute;
-    bottom:0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(125,125,125,0.4);
-    color: white;
+    color: var(--light-grey);
 }
 .carousel-controls a:hover{
     color: var(--green);
     transform: scaleY(1.5);
 }
-#next{
-    display: inline-block;
-    width: 70%;
-    text-align: right;
-    padding-right: 10%;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
+.carousel-info{
+    
 }
-#prev{
-    display: inline-block;
-    width: 25%;
-    text-align: left;
-    padding-left: 10%;
+#next, #prev{
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+    font-weight: bolder;
+    font-size: 2em;
+    flex-basis: 20%;
+    padding: 5% 0 5% 0;
 }
 .font{
     color: var(--font-color);
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.font-white{
+    color: white;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .carousel-container{
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
+    justify-content: center;
+}
+.carousel-not-active{
+    
+}
+.carousel-overlay{
+    border:1px solid black;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width:100px;
+    height: 100px;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: var(--green);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.carousel-item:hover .carousel-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+.carousel-item:hover{
+    opacity: 1;
+}
+.carausel-link{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .carousel-item{
     height: 200px;
+    max-width: 300px;
     flex-basis: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
 }
 #item1{
     background-image: url("../img/carousel/project-jezik.png");
-    transition: all 0.5s ease-in-out;
+    display:none;
 }
 #item2{
     background-image: url("../img/carousel/project-boy-and-girl.png");
@@ -164,7 +195,7 @@ iframe{
 }
 #item3{
     background-image: url("../img/carousel/project-buttons.png");
-    display: none;
+    display: block;
 }
 #item4{
     background-image: url("../img/carousel/project-social-media.png");
@@ -182,6 +213,7 @@ iframe{
 .logo-container{
     display: flex;
     align-items: center;
+    padding-bottom: 30px;
 }
 .icon-container{
     display: flex;
@@ -257,12 +289,28 @@ iframe{
 .view-icons{
     margin-left: auto;
     padding-right: 10px;
+    display: flex;
 }
 .icons{
     display: inline-block;
     cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-items: center;
+    padding-left: 5px;
 }
 .icons:hover .cls-2{
+    fill: #2ecc71;
+}
+.cls-1 {
+    fill:#dadada;
+    fill-rule: evenodd;
+    transition: fill 0.5s ease-in-out;
+}
+.icons:hover .cls-1{
+    fill: #2ecc71;
+}
+.cls-1:hover{
     fill: #2ecc71;
 }
 /* grid start */
@@ -291,6 +339,7 @@ main{
 }
 .getToKnow{
     grid-area: getToKnow;
+    margin-bottom: 50px;
 }
 .projects{
     grid-area: projects;
@@ -452,11 +501,11 @@ main{
     iframe{
         height: 315px;
     }
-    #item2{
-        display: block;
-    }
     .footer,.address{
         font-size: 0.8em;
+    }
+    #item2{
+        display: block;
     }
     .img{
         margin:0 auto;
@@ -473,6 +522,12 @@ main{
         height: 500px;
     }
     #item3{
+        display: block;
+    }
+    #item1{
+        display: block;
+    }
+    #item4{
         display: block;
     }
     .img{

@@ -1,8 +1,8 @@
-let picture1 = 'url("img/carousel/project-jezik.png")';
-let picture2 = 'url("img/carousel/project-boy-and-girl.png")';
-let picture3 = 'url("img/carousel/project-buttons.png")';
-let picture4 = 'url("img/carousel/project-social-media.png")';
-let picture5 = 'url("img/carousel/project-jes.png")';
+let picture1 = 'url("../img/carousel/project-jezik.png")';
+let picture2 = 'url("../img/carousel/project-boy-and-girl.png")';
+let picture3 = 'url("../img/carousel/project-buttons.png")';
+let picture4 = 'url("../img/carousel/project-social-media.png")';
+let picture5 = 'url("../img/carousel/project-jes.png")';
 
 let pictureArray = [picture1, picture2, picture3, picture4, picture5];
 console.log(pictureArray);

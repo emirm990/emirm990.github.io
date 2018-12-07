@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/stil.css">
-    <title>Document</title>
+    <link rel="icon" href="img/icon.png">
+    <title>Display</title>
 </head>
 <body>
     <nav class="navigation-container container">
-        <div class="logo">
+        <div class="logo" id="logo">
             <div class="logo-container">
                 <img src="img/logo.png">
             </div> 
@@ -73,7 +74,7 @@
         <section class="getToKnow container">
             <div class="work-search-container">
                 <ul class="work-search --uppercase font">
-                    <li id="all" class="work-search-items">all</li>
+                    <li id="all" class="work-search-items active-page">all</li>
                     <span>/</span>
                     <li id="print" class="work-search-items">print</li>
                     <span>/</span>
@@ -118,7 +119,7 @@
                 <div class="work-flex-item print">
                     <img src="img/work-img/img.png">
                 </div>
-                <div class="work-flex-item applications">
+                <div class="work-flex-item web">
                     <img src="img/work-img/img-1.png">
                 </div>
                 <div class="work-flex-item photography">
@@ -142,6 +143,9 @@
                 <div class="work-flex-item print">
                     <img src="img/work-img/img-8.png">
                 </div>
+                <div class="font" id="no-results">
+                    <p>No Results!</p>
+                </div>
             </div>
         </section>
         <div class="center call-to-action-bottom callToAction font-white">
@@ -155,16 +159,17 @@
             </address>
             <div class="work-search-container nav">
                 <ul class="work-search --uppercase">
-                    <li class="work-search-items">home</li>
+                    <li class="work-search-items"><a href="index.html">home</a></li>
                     <span>/</span>
-                    <li class="work-search-items">about</li>
+                    <li class="work-search-items"><a href="about.html">about</a></li>
                     <span>/</span>
-                    <li class="work-search-items">work</li>
+                    <li class="work-search-items"><a href="work.html">work</a></li>
                     <span>/</span>
-                    <li class="work-search-items">contact</li>
+                    <li class="work-search-items"><a href="contact.html">contact</a></li>
                 </ul>
             </div>
     </footer>
     <script src="js/work.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>

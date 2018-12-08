@@ -27,23 +27,23 @@ let animatedButton = document.querySelector(".--animated-button");
 
 let animatedText = document.querySelector(".--animated-text");
 
-// Get the modal
+
 let modal = document.getElementById('myModal');
 let modalVideo = document.getElementById("modal-video");
 
-// Get the button that opens the modal
+
 let openModal = document.getElementById("open-video");
 
-// When the user clicks on the button, open the modal 
+//kada zatvorimo modal, source se refreshuje i prekine s puštanjem videa
 modal.addEventListener("click", function(){
-    modalVideo.attributes.src = null;
+    modalVideo.src = modalVideo.src;
 })
+
 openModal.onclick = function() {
     modal.style.display = "block";
   }
 
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
+window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }

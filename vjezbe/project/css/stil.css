@@ -576,7 +576,37 @@ main{
 }
 
 /*form-ends*/
-
+@media (max-width: 410px){
+    .nav-list{
+        display: block;
+        overflow: hidden;
+        height: 50px;
+        transition: all 0.5s ease-in;
+        z-index: 99;
+        background-color: white;
+    }
+    .nav-items{
+        height: 50px;
+    }
+    .nav-list:hover{
+        height: 200px;
+    }
+    .navigation-container{
+        position: relative;
+    }
+    .width50{
+        position: absolute;;
+        top: 5px;
+        right: 0px;
+        z-index: 99;
+    }
+    .icon-container{
+        display: none;
+    }
+    .logo{
+        justify-content: flex-start;
+    }
+}
 @media (min-width: 600px){
     iframe{
         height: 315px;

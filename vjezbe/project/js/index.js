@@ -5,7 +5,7 @@ let picture4 = 'url("img/carousel/project-social-media.jpg")';
 let picture5 = 'url("img/carousel/project-jes.jpg")';
 
 let pictureArray = [picture1, picture2, picture3, picture4, picture5];
-console.log(pictureArray);
+
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
 
@@ -21,17 +21,11 @@ let count4 = 3;
 let count5 = 4;
 
 let devices = document.querySelector(".--foreground");
-
-
 let animatedButton = document.querySelector(".--animated-button");
-
 let animatedText = document.querySelector(".--animated-text");
-
 
 let modal = document.getElementById('myModal');
 let modalVideo = document.getElementById("modal-video");
-
-
 let openModal = document.getElementById("open-video");
 
 //kada zatvorimo modal, source se refreshuje i prekine s puštanjem videa
@@ -59,6 +53,7 @@ function animation(){
     
 }
 animation();
+// funkcija changeImg nije elegantna ali radi
 function changeImg(arg){
     if (arg==0){
         if(count < 4){

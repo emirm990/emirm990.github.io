@@ -60,6 +60,12 @@ body{
 .post--button:disabled{
     opacity: 0.5;
 }
+.changePassword--button{
+    display: none;
+}
+.changePassword--button:hover{
+    background-color: white;
+}
 #help{
     transform: translateY(15%);
 }

@@ -18,6 +18,7 @@ let emailRegister = domSelect("#email-register"); //document.getElementById("ema
 let passwordRegister = domSelect("#password-register"); //document.getElementById("password-register");
 let passwordCheck = domSelect("#password-check"); //document.getElementById("password-check");
 let verifyEmail = domSelect("#verify"); //document.getElementById("verify");
+let changePassword = domSelect("#changePassword");
 let emailVerificationMessage = domSelect("#email-verification-message"); //document.getElementById("email-verification-message");
 function domSelect(element){
     if (element.startsWith("#")){
@@ -119,8 +120,8 @@ function postToDoItem(username){
     getItems();
     checkedColor();
 }
-function clearMessage(){
-    emailVerificationMessage.innerText = "E-mail sent, please check junk/spam folder.";
+function infoMessage(message){
+    emailVerificationMessage.innerText = message;
     emailVerificationMessage.style.color = "green";
     setTimeout(function(){
         emailVerificationMessage.innerText = "";
@@ -173,6 +174,11 @@ firebase.auth().onAuthStateChanged(function(user) {
             addItem.addEventListener("click", function(){
                 postToDoItem(username)
             });
+            changePassword.style.display = "inline-block";
+            changePassword.addEventListener("click", function(){
+                passwordChange(username);
+                infoMessage("Email sent, please check your junk/spam folder");
+                });
         }else{
             verifyEmail.style.display = "inline-block";
             addItem.disabled = true;
@@ -185,8 +191,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         }
         verifyEmail.addEventListener("click", function(){
             user.sendEmailVerification(actionCodeSettings).then(function() {
-                console.log("email sent");
-                clearMessage()
+                infoMessage("Email sent, please check your junk/spam folder");
               }).catch(function(error) {
                 // An error happened.
                 alert("Error: ", error);

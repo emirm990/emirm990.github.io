@@ -1,7 +1,7 @@
 :root{
 	--nav-color: #A9AFAF;
-	--body-color: #D9DFDF;
-	--main-color: #F0EADA;
+	--body-color: rgb(217, 223, 223);
+	--main-color: rgb(240, 234, 218);
 	--link-color: #DDD4C5;
 	--nav-link-color: #F5F8F1;
 }
@@ -67,9 +67,61 @@ ul span{
 #progressBar {
 	height: 8px;
 	width:0%;
-	background-color: green;
+	background-color: rgb(240, 234, 218);
 }
-
+/*projects start*/
+.grid-container{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+}
+.grid-item{
+	position: relative;
+}
+.grid-item img{
+	max-width: 100%;
+}
+.grid-overlay{
+	display: block;
+	height: 0%;
+	width: 100%;
+	background-color: rgb(240, 234, 218,0.9);
+	position: absolute;
+	bottom:0;
+	opacity:0;
+	padding: 10px 10px 10px 0;
+	transition: all 0.5s ease-in;
+	z-index:5;
+}
+.grid-overlay-button{
+	position: absolute;
+	padding:0;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	border: none;
+	background-color: var(--body-color);
+	transition: all 0.5s ease-in;
+}
+.grid-overlay-button:hover{
+	border: none;
+	box-shadow:
+		0 0 7px 7px var(--main-color) inset,
+		0 0 15px 15px var(--nav-color) inset;
+}
+.grid-overlay-button a{
+	display: block;
+	width:100%;
+	height:100%;
+	padding:15px 0 15px 0;
+}
+.grid-item:hover .grid-overlay{
+	opacity: 1;
+	height: 100%;
+}
+/*projects end*/	
 /*navigation end*/
 /*about start*/
 .fa-github{
@@ -143,10 +195,6 @@ ul span{
     visibility: visible;
 }
 /*tooltip end*/
-#projects i{
-	padding:0 10px 0 10px;
-	color: var(--nav-color);
-}
 
 /*footer start*/
 footer{
@@ -156,163 +204,6 @@ footer{
 
 /*footer end*/
 /*grid placement*/
-
-#projects{
-	display:grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: auto;
-	grid-template-areas:
-		"img1 img1 des1"
-		"img1 img1 link1"
-		"end1 end1 end1"
-		"des2 img2 img2"
-		"link2 img2 img2"
-		"end2 end2 end2"
-		"img3 img3 des3"
-		"img3 img3 link3"
-		"end3 end3 end3"
-		"des4 img4 img4"
-		"link4 img4 img4"
-		"end4 end4 end4"
-		"img5 img5 des5"
-		"img5 img5 link5"
-		"end5 end5 end5"
-		"des6 img6 img6"
-		"link6 img6 img6"
-		;
-		grid-row-gap: 20px;
-		align-items: center;
-		text-align: center;
-		vertical-align: middle;
-}
-.end1,.end2,.end3,.end4,.end5{
-	height:5px;
-	background-color: var(--body-color);
-}
-.end1{
-	grid-area: end1;
-}
-.end2{
-	grid-area: end2;
-}
-.end3{
-	grid-area: end3;
-}
-.end4{
-	grid-area: end4;
-}
-.end5{
-	grid-area: end5;
-}
-#projects{
-	padding-top:25px;
-}
-#projects a{
-	display:inline-block;
-	transition: all 1s ease-in-out;
-	border: 1px solid;
-	border-color: var(--body-color);
-	height:50%;
-	width:101%;
-	background-color: var(--body-color);
-	
-}
-#projects a:link, #projects a:visited{
-	color:black;
-	
-}
-#projects p{
-	font-size:1.2em;
-	
-}
-#projects a:hover{
-	height:100%;
-}
-
-a p{
-	position: relative;
-	margin:0;
-	top: 50%;
-	transform: translateY(-50%);
-}
-#projects img{
-	width:100%;
-	position:relative;
-	margin-top: 25px;
-}
-.img1{
-	grid-area: img1;
-	right:40px;
-	box-shadow: -10px 2px 10px #A9AFAF;
-	
-}
-.des1{
-	grid-area: des1;
-	
-}
-.link1{
-	grid-area: link1;
-}
-
-.img2{
-	grid-area: img2;
-	left:40px;
-	box-shadow: 10px 2px 10px #A9AFAF;
-}
-.des2{
-	grid-area: des2;
-}
-.link2{
-	grid-area: link2;
-}
-
-.img3{
-	grid-area: img3;
-	right:40px;
-	box-shadow: -10px 2px 10px #A9AFAF;
-}
-.des3{
-	grid-area: des3;
-}
-.link3{
-	grid-area: link3;
-}
-
-.img4{
-	grid-area: img4;
-	left:40px;
-	box-shadow: 10px 2px 10px #A9AFAF;
-}
-.des4{
-	grid-area: des4;
-}
-.link4{
-	grid-area: link4;
-}
-
-.img5{
-	grid-area: img5;
-	right:40px;
-	box-shadow: -10px 2px 10px #A9AFAF;
-}
-.des5{
-	grid-area: des5;
-}
-.link5{
-	grid-area: link5;
-}
-
-.img6{
-	grid-area: img6;
-	left:40px;
-	box-shadow: 10px 2px 10px #A9AFAF;
-}
-.des6{
-	grid-area: des6;
-}
-.link6{
-	grid-area: link6;
-}
 
 
 
@@ -324,48 +215,6 @@ a p{
 	main{
 		width:100%;
 	}
-	#projects{
-		grid-template-columns: 1fr 1fr;
-		grid-template-areas:
-			"des1 link1"
-			"img1 img1"
-			"des2 link2"
-			"img2 img2"
-			"des3 link3"
-			"img3 img3"
-			"des4 link4"
-			"img4 img4"
-			"des5 link5"
-			"img5 img5"
-			"des6 link6"
-			"img6 img6"
-			;	
-	}
-	.img1{
-		right:0px;
-		box-shadow: none;
-		width:80%;
-	}
-	.img2{
-		left:0px;
-		box-shadow: none;
-	}
-	.img3{
-		right:0px;
-		box-shadow: none;
-	}
-	.img4{
-		left:0px;
-		box-shadow: none;
-	}
-	.img5{
-		right:0px;
-		box-shadow: none;
-	}
-	.img6{
-		left:0px;
-		box-shadow: none;
-	}
 	#about{
 		width:100%;
 		grid-template-areas: 
@@ -375,25 +224,6 @@ a p{
 	}
 	#about img{
 		max-width: 20%;
-	}
-	.divider{
-		padding-bottom: 50px;
-		background-color: var(--body-color);
-		border-bottom: 1px solid var(--nav-color);
-	}
-	#projects img{
-		width:100%;
-		position:relative;
-		margin-top:0;
-	}
-	#projects a{
-		height: 100%;
-	}
-	#projects a:hover{
-		height: 200%;
-	}
-	#projects img{
-		border-bottom: 1px solid black;
 	}
 	nav ul{
 		width: 100%;

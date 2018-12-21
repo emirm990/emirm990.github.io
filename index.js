@@ -7,9 +7,14 @@ let menuIcon = document.getElementById("menu-icon");
 navButton.addEventListener("click", function(){
     navigationList.classList.toggle("block");
     navigation.classList.toggle("block");
+
     if (navigation.classList.contains("block")){
+        
         progressBar.style.top = "0";
-    }else progressBar.style.top = "25px";
+    }else {
+        progressBar.style.top = "25px";
+        
+    }
     //todo menuIcon.style.transform = "rotate(90deg)";
 })
 

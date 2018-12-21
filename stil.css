@@ -121,6 +121,9 @@ ul span{
 	opacity: 1;
 	height: 100%;
 }
+.grid-item:hover .grid-overlay-button{
+	display: block;
+}
 /*projects end*/	
 /*navigation end*/
 /*about start*/
@@ -234,6 +237,11 @@ footer{
 		position: relative;
 		top:25px;
 	}
+	.grid-container{
+		display: grid;
+		grid-template-columns: auto;
+		grid-row-gap: 15px;
+	}
 	nav{
 		height:25px;
 		
@@ -249,9 +257,10 @@ footer{
 		top: 25px;
 	}
 	#nav-expand{
-		display: inline-block;
+		display: block;
 		z-index:999;
 		position: fixed;
+		width: 100% !important;
 		right:0;
 		top:0;
 		border:none;
@@ -270,7 +279,7 @@ footer{
 	}
 	.block{
 		display: block;
-		height: 125px;
+		height: 100px;
 	}
 	.shrink{
 		animation-duration: 2s;

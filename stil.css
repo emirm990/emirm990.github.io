@@ -72,7 +72,7 @@ ul span{
 	display: grid;
 	grid-template-columns: auto auto;
 	align-items: center;
-	
+	justify-content: center;
 }
 .grid-item{
 	position: relative;

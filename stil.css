@@ -14,11 +14,9 @@ body{
 	background-color:var(--body-color);
 }
 main{
-	width:90%;
 	margin:0 auto;
 	background-color: var(--main-color);
 	padding-bottom:10px;
-	
 }
 /*navigation start*/
 nav{
@@ -73,11 +71,15 @@ ul span{
 .grid-container{
 	display: grid;
 	grid-template-columns: auto auto;
-	grid-column-gap: 5px;
-	grid-row-gap: 5px;
+	align-items: center;
+	
 }
 .grid-item{
 	position: relative;
+	width: 600px;
+	height: 400px;
+	display: flex;
+	justify-content: center;
 }
 .grid-item img{
 	max-width: 100%;
@@ -88,7 +90,7 @@ ul span{
 	width: 100%;
 	background-color: rgb(240, 234, 218,0.9);
 	position: absolute;
-	bottom:0;
+	top:0;
 	opacity:0;
 	padding: 10px 10px 10px 0;
 	transition: all 0.5s ease-in;
@@ -120,10 +122,327 @@ ul span{
 .grid-item:hover .grid-overlay{
 	opacity: 1;
 	height: 100%;
+	transition-delay: 0.45s;
 }
 .grid-item:hover .grid-overlay-button{
 	display: block;
 }
+/* item 1 in projects -start- */
+.grid-item:hover #project1-1{
+	top:100%;
+	opacity:0;
+}
+.grid-item:hover #project1-2{
+	top:100%;
+	transition-delay: 0.15s;
+	opacity:0;
+}
+.grid-item:hover #project1-3{
+	top:100%;
+	transition-delay: 0.30s;
+	opacity:0;
+}
+.grid-item:hover #project1-4{
+	top:100%;
+	transition-delay: 0.45s;
+	opacity:0;
+}
+#project1-1, #project1-2, #project1-3, #project1-4{
+	background-image: url("/project-img/movies-and-tv.jpg");
+	background-size: 600px;
+	background-repeat: no-repeat;
+	width: 25%;
+	height: 100%;
+	position: relative;
+	top:0px;
+	transition: all 0.5s ease-in;
+	z-index:0;
+	margin:0;
+}
+#project1-1{
+	background-position-x: 0;
+}
+#project1-2{
+	background-position-x: -150px;
+}
+#project1-3{
+	background-position-x: -300px;
+}
+#project1-4{
+	background-position-x: -450px;
+}
+/* item 1 in projects -end- */
+
+/* item 2 in projects -start- */
+.grid-item:hover #project2-1{
+	top:100%;
+	opacity:0;
+}
+.grid-item:hover #project2-2{
+	top:100%;
+	transition-delay: 0.15s;
+	opacity:0;
+}
+.grid-item:hover #project2-3{
+	top:100%;
+	transition-delay: 0.30s;
+	opacity:0;
+}
+.grid-item:hover #project2-4{
+	top:100%;
+	transition-delay: 0.45s;
+	opacity:0;
+}
+#project2-1, #project2-2, #project2-3, #project2-4{
+	background-image: url("/project-img/display.jpg");
+	background-size: 600px;
+	width: 25%;
+	height: 100%;
+	position: relative;
+	top:0px;
+	transition: all 0.5s ease-in;
+	z-index:0;
+	margin:0;
+}
+#project2-1{
+	background-position-x: 0;
+}
+#project2-2{
+	background-position-x: -150px;
+}
+#project2-3{
+	background-position-x: -300px;
+}
+#project2-4{
+	background-position-x: -450px;
+}
+/* item 2 in projects -end- */
+
+/* item 3 in projects -start- */
+.grid-item:hover #project3-1{
+	top:100%;
+	opacity:0;
+}
+.grid-item:hover #project3-2{
+	top:100%;
+	transition-delay: 0.15s;
+	opacity:0;
+}
+.grid-item:hover #project3-3{
+	top:100%;
+	transition-delay: 0.30s;
+	opacity:0;
+}
+.grid-item:hover #project3-4{
+	top:100%;
+	transition-delay: 0.45s;
+	opacity:0;
+}
+#project3-1, #project3-2, #project3-3, #project3-4{
+	background-image: url("/project-img/to-to-list.jpg");
+	background-size: 600px;
+	width: 25%;
+	height: 100%;
+	position: relative;
+	top:0px;
+	transition: all 0.5s ease-in;
+	z-index:0;
+	margin:0;
+}
+#project3-1{
+	background-position-x: 0;
+}
+#project3-2{
+	background-position-x: -150px;
+}
+#project3-3{
+	background-position-x: -300px;
+}
+#project3-4{
+	background-position-x: -450px;
+}
+/* item 3 in projects -end- */
+
+/* item 4 in projects -start- */
+.grid-item:hover #project4-1{
+	top:100%;
+	opacity:0;
+}
+.grid-item:hover #project4-2{
+	top:100%;
+	transition-delay: 0.15s;
+	opacity:0;
+}
+.grid-item:hover #project4-3{
+	top:100%;
+	transition-delay: 0.30s;
+	opacity:0;
+}
+.grid-item:hover #project4-4{
+	top:100%;
+	transition-delay: 0.45s;
+	opacity:0;
+}
+#project4-1, #project4-2, #project4-3, #project4-4{
+	background-image: url("/project-img/user-location.jpg");
+	background-size: 600px;
+	width: 25%;
+	height: 100%;
+	position: relative;
+	top:0px;
+	transition: all 0.5s ease-in;
+	z-index:0;
+	margin:0;
+}
+#project4-1{
+	background-position-x: 0;
+}
+#project4-2{
+	background-position-x: -150px;
+}
+#project4-3{
+	background-position-x: -300px;
+}
+#project4-4{
+	background-position-x: -450px;
+}
+/* item 4 in projects -end- */
+
+/* item 5 item in projects -start- */
+.grid-item:hover #project5-1{
+	top:100%;
+	opacity:0;
+}
+.grid-item:hover #project5-2{
+	top:100%;
+	transition-delay: 0.15s;
+	opacity:0;
+}
+.grid-item:hover #project5-3{
+	top:100%;
+	transition-delay: 0.30s;
+	opacity:0;
+}
+.grid-item:hover #project5-4{
+	top:100%;
+	transition-delay: 0.45s;
+	opacity:0;
+}
+#project5-1, #project5-2, #project5-3, #project5-4{
+	background-image: url("/project-img/drawing-board.jpg");
+	background-size: 600px;
+	width: 25%;
+	height: 100%;
+	position: relative;
+	top:0px;
+	transition: all 0.5s ease-in;
+	z-index:0;
+	margin:0;
+}
+#project5-1{
+	background-position-x: 0;
+}
+#project5-2{
+	background-position-x: -150px;
+}
+#project5-3{
+	background-position-x: -300px;
+}
+#project5-4{
+	background-position-x: -450px;
+}
+/* item 5 in projects -end- */
+
+/* item 6 in projects -start- */
+.grid-item:hover #project6-1{
+	top:100%;
+	opacity:0;
+}
+.grid-item:hover #project6-2{
+	top:100%;
+	transition-delay: 0.15s;
+	opacity:0;
+}
+.grid-item:hover #project6-3{
+	top:100%;
+	transition-delay: 0.30s;
+	opacity:0;
+}
+.grid-item:hover #project6-4{
+	top:100%;
+	transition-delay: 0.45s;
+	opacity:0;
+}
+#project6-1, #project6-2, #project6-3, #project6-4{
+	background-image: url("/project-img/random-quotes.jpg");
+	background-size: 600px;
+	width: 25%;
+	height: 100%;
+	position: relative;
+	top:0px;
+	transition: all 0.5s ease-in;
+	z-index:0;
+	margin:0;
+}
+#project6-1{
+	background-position-x: 0;
+}
+#project6-2{
+	background-position-x: -150px;
+}
+#project6-3{
+	background-position-x: -300px;
+}
+#project6-4{
+	background-position-x: -450px;
+}
+/* item 6 in projects -end- */
+
+/* item 7 in projects -start- */
+.grid-item:hover #project7-1{
+	top:100%;
+	opacity:0;
+}
+.grid-item:hover #project7-2{
+	top:100%;
+	transition-delay: 0.15s;
+	opacity:0;
+}
+.grid-item:hover #project7-3{
+	top:100%;
+	transition-delay: 0.30s;
+	opacity:0;
+}
+.grid-item:hover #project7-4{
+	top:100%;
+	transition-delay: 0.45s;
+	opacity:0;
+}
+#project7-1, #project7-2, #project7-3, #project7-4{
+	background-image: url("/project-img/weather.jpg");
+	background-size: 600px;
+	width: 25%;
+	height: 100%;
+	position: relative;
+	top:0px;
+	transition: all 0.5s ease-in;
+	z-index:0;
+	margin:0;
+}
+#project7-1{
+	background-position-x: 0;
+}
+#project7-2{
+	background-position-x: -150px;
+}
+#project7-3{
+	background-position-x: -300px;
+}
+#project7-4{
+	background-position-x: -450px;
+}
+/* item 7 in projects -end- */
+
 /*projects end*/	
 /*navigation end*/
 /*about start*/
@@ -214,10 +533,34 @@ footer{
 .practice-about{
 	padding: 100px;
 }
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1200px){
 	main{
-		width:100%;
+		width: 100%;
 	}
+	.grid-item{
+		width: 450px;
+		height: 300px;
+	}
+	#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1{
+		background-position-x: 0;
+	}
+	#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2{
+		background-position-x: -112.5px;
+	}
+	#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3{
+		background-position-x: -225px;
+	}
+	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
+		background-position-x: -337.5px;
+	}
+	#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1,
+	#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2,
+	#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3,
+	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
+		background-size: 450px;
+	}
+}
+@media only screen and (max-width: 900px){
 	#about{
 		width:100%;
 		grid-template-areas: 
@@ -231,6 +574,34 @@ footer{
 	nav ul{
 		width: 100%;
 	}
+	.grid-container{
+		display: grid;
+		grid-template-columns: auto;
+		grid-row-gap: 15px;
+	}
+	.grid-item{
+		width: 600px;
+		height: 400px;
+	}
+	#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1{
+		background-position-x: 0;
+	}
+	#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2{
+		background-position-x: -150px;
+	}
+	#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3{
+		background-position-x: -300px;
+	}
+	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
+		background-position-x: -450px;
+	}
+	#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1,
+	#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2,
+	#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3,
+	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
+		background-size: 600px;
+	}
+	
 }
 @media only screen and (max-width: 600px){
 	#progressBar{
@@ -286,5 +657,62 @@ footer{
 		animation-fill-mode: forwards;
 		animation-iteration-count: 1;
 		animation-name: shrink;
+	}
+	.grid-container{
+		display: grid;
+		grid-template-columns: auto;
+		grid-row-gap: 15px;
+	}
+	.grid-item{
+		width: 450px;
+		height: 300px;
+	}
+	#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1{
+		background-position-x: 0;
+	}
+	#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2{
+		background-position-x: -112.5px;
+	}
+	#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3{
+		background-position-x: -225px;
+	}
+	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
+		background-position-x: -337.5px;
+	}
+	#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1,
+	#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2,
+	#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3,
+	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
+		background-size: 450px;
+	}
+	
+}
+@media only screen and (max-width: 450px){
+	.grid-container{
+		display: grid;
+		grid-template-columns: auto;
+		grid-row-gap: 15px;
+	}
+	.grid-item{
+		width: 100vw;
+		height: 300px;
+	}
+	#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1{
+		background-position-x: 0;
+	}
+	#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2{
+		background-position-x: -112.5px;
+	}
+	#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3{
+		background-position-x: -225px;
+	}
+	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
+		background-position-x: -337.5px;
+	}
+	#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1,
+	#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2,
+	#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3,
+	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
+		background-size: 450px;
 	}
 }

@@ -196,6 +196,7 @@ ul span{
 #project2-1, #project2-2, #project2-3, #project2-4{
 	background-image: url("/project-img/display.jpg");
 	background-size: 600px;
+	background-repeat: no-repeat;
 	width: 25%;
 	height: 100%;
 	position: relative;
@@ -241,6 +242,7 @@ ul span{
 #project3-1, #project3-2, #project3-3, #project3-4{
 	background-image: url("/project-img/to-to-list.jpg");
 	background-size: 600px;
+	background-repeat: no-repeat;
 	width: 25%;
 	height: 100%;
 	position: relative;
@@ -286,6 +288,7 @@ ul span{
 #project4-1, #project4-2, #project4-3, #project4-4{
 	background-image: url("/project-img/user-location.jpg");
 	background-size: 600px;
+	background-repeat: no-repeat;
 	width: 25%;
 	height: 100%;
 	position: relative;
@@ -331,6 +334,7 @@ ul span{
 #project5-1, #project5-2, #project5-3, #project5-4{
 	background-image: url("/project-img/drawing-board.jpg");
 	background-size: 600px;
+	background-repeat: no-repeat;
 	width: 25%;
 	height: 100%;
 	position: relative;
@@ -376,6 +380,7 @@ ul span{
 #project6-1, #project6-2, #project6-3, #project6-4{
 	background-image: url("/project-img/random-quotes.jpg");
 	background-size: 600px;
+	background-repeat: no-repeat;
 	width: 25%;
 	height: 100%;
 	position: relative;
@@ -421,6 +426,7 @@ ul span{
 #project7-1, #project7-2, #project7-3, #project7-4{
 	background-image: url("/project-img/weather.jpg");
 	background-size: 600px;
+	background-repeat: no-repeat;
 	width: 25%;
 	height: 100%;
 	position: relative;

@@ -73,6 +73,7 @@ ul span{
 	grid-template-columns: auto auto;
 	align-items: center;
 	justify-content: center;
+	column-gap: 15px;
 }
 .grid-item{
 	position: relative;
@@ -130,304 +131,28 @@ ul span{
 .grid-item:hover .grid-overlay-button{
 	display: block;
 }
-/* item 1 in projects -start- */
-.grid-item:hover #project1-1{
-	top:100%;
-	opacity:0;
-}
-.grid-item:hover #project1-2{
-	top:100%;
-	transition-delay: 0.15s;
-	opacity:0;
-}
-.grid-item:hover #project1-3{
-	top:100%;
-	transition-delay: 0.30s;
-	opacity:0;
-}
-.grid-item:hover #project1-4{
-	top:100%;
-	transition-delay: 0.45s;
-	opacity:0;
-}
-#project1-1, #project1-2, #project1-3, #project1-4{
+.project1{
 	background-image: url("/project-img/movies-and-tv.jpg");
-	background-size: 600px;
-	background-repeat: no-repeat;
-	width: 25%;
-	height: 100%;
-	position: relative;
-	top:0px;
-	transition: all 0.5s ease-in;
-	z-index:0;
-	margin:0;
 }
-#project1-1{
-	background-position-x: 0;
-}
-#project1-2{
-	background-position-x: -150px;
-}
-#project1-3{
-	background-position-x: -300px;
-}
-#project1-4{
-	background-position-x: -450px;
-}
-/* item 1 in projects -end- */
-
-/* item 2 in projects -start- */
-.grid-item:hover #project2-1{
-	top:100%;
-	opacity:0;
-}
-.grid-item:hover #project2-2{
-	top:100%;
-	transition-delay: 0.15s;
-	opacity:0;
-}
-.grid-item:hover #project2-3{
-	top:100%;
-	transition-delay: 0.30s;
-	opacity:0;
-}
-.grid-item:hover #project2-4{
-	top:100%;
-	transition-delay: 0.45s;
-	opacity:0;
-}
-#project2-1, #project2-2, #project2-3, #project2-4{
+.project2{
 	background-image: url("/project-img/display.jpg");
-	background-size: 600px;
-	background-repeat: no-repeat;
-	width: 25%;
-	height: 100%;
-	position: relative;
-	top:0px;
-	transition: all 0.5s ease-in;
-	z-index:0;
-	margin:0;
 }
-#project2-1{
-	background-position-x: 0;
-}
-#project2-2{
-	background-position-x: -150px;
-}
-#project2-3{
-	background-position-x: -300px;
-}
-#project2-4{
-	background-position-x: -450px;
-}
-/* item 2 in projects -end- */
-
-/* item 3 in projects -start- */
-.grid-item:hover #project3-1{
-	top:100%;
-	opacity:0;
-}
-.grid-item:hover #project3-2{
-	top:100%;
-	transition-delay: 0.15s;
-	opacity:0;
-}
-.grid-item:hover #project3-3{
-	top:100%;
-	transition-delay: 0.30s;
-	opacity:0;
-}
-.grid-item:hover #project3-4{
-	top:100%;
-	transition-delay: 0.45s;
-	opacity:0;
-}
-#project3-1, #project3-2, #project3-3, #project3-4{
+.project3{
 	background-image: url("/project-img/to-to-list.jpg");
-	background-size: 600px;
-	background-repeat: no-repeat;
-	width: 25%;
-	height: 100%;
-	position: relative;
-	top:0px;
-	transition: all 0.5s ease-in;
-	z-index:0;
-	margin:0;
 }
-#project3-1{
-	background-position-x: 0;
-}
-#project3-2{
-	background-position-x: -150px;
-}
-#project3-3{
-	background-position-x: -300px;
-}
-#project3-4{
-	background-position-x: -450px;
-}
-/* item 3 in projects -end- */
-
-/* item 4 in projects -start- */
-.grid-item:hover #project4-1{
-	top:100%;
-	opacity:0;
-}
-.grid-item:hover #project4-2{
-	top:100%;
-	transition-delay: 0.15s;
-	opacity:0;
-}
-.grid-item:hover #project4-3{
-	top:100%;
-	transition-delay: 0.30s;
-	opacity:0;
-}
-.grid-item:hover #project4-4{
-	top:100%;
-	transition-delay: 0.45s;
-	opacity:0;
-}
-#project4-1, #project4-2, #project4-3, #project4-4{
+.project4{
 	background-image: url("/project-img/user-location.jpg");
-	background-size: 600px;
-	background-repeat: no-repeat;
-	width: 25%;
-	height: 100%;
-	position: relative;
-	top:0px;
-	transition: all 0.5s ease-in;
-	z-index:0;
-	margin:0;
 }
-#project4-1{
-	background-position-x: 0;
-}
-#project4-2{
-	background-position-x: -150px;
-}
-#project4-3{
-	background-position-x: -300px;
-}
-#project4-4{
-	background-position-x: -450px;
-}
-/* item 4 in projects -end- */
-
-/* item 5 item in projects -start- */
-.grid-item:hover #project5-1{
-	top:100%;
-	opacity:0;
-}
-.grid-item:hover #project5-2{
-	top:100%;
-	transition-delay: 0.15s;
-	opacity:0;
-}
-.grid-item:hover #project5-3{
-	top:100%;
-	transition-delay: 0.30s;
-	opacity:0;
-}
-.grid-item:hover #project5-4{
-	top:100%;
-	transition-delay: 0.45s;
-	opacity:0;
-}
-#project5-1, #project5-2, #project5-3, #project5-4{
+.project5{
 	background-image: url("/project-img/drawing-board.jpg");
-	background-size: 600px;
-	background-repeat: no-repeat;
-	width: 25%;
-	height: 100%;
-	position: relative;
-	top:0px;
-	transition: all 0.5s ease-in;
-	z-index:0;
-	margin:0;
 }
-#project5-1{
-	background-position-x: 0;
-}
-#project5-2{
-	background-position-x: -150px;
-}
-#project5-3{
-	background-position-x: -300px;
-}
-#project5-4{
-	background-position-x: -450px;
-}
-/* item 5 in projects -end- */
-
-/* item 6 in projects -start- */
-.grid-item:hover #project6-1{
-	top:100%;
-	opacity:0;
-}
-.grid-item:hover #project6-2{
-	top:100%;
-	transition-delay: 0.15s;
-	opacity:0;
-}
-.grid-item:hover #project6-3{
-	top:100%;
-	transition-delay: 0.30s;
-	opacity:0;
-}
-.grid-item:hover #project6-4{
-	top:100%;
-	transition-delay: 0.45s;
-	opacity:0;
-}
-#project6-1, #project6-2, #project6-3, #project6-4{
+.project6{
 	background-image: url("/project-img/random-quotes.jpg");
-	background-size: 600px;
-	background-repeat: no-repeat;
-	width: 25%;
-	height: 100%;
-	position: relative;
-	top:0px;
-	transition: all 0.5s ease-in;
-	z-index:0;
-	margin:0;
 }
-#project6-1{
-	background-position-x: 0;
-}
-#project6-2{
-	background-position-x: -150px;
-}
-#project6-3{
-	background-position-x: -300px;
-}
-#project6-4{
-	background-position-x: -450px;
-}
-/* item 6 in projects -end- */
-
-/* item 7 in projects -start- */
-.grid-item:hover #project7-1{
-	top:100%;
-	opacity:0;
-}
-.grid-item:hover #project7-2{
-	top:100%;
-	transition-delay: 0.15s;
-	opacity:0;
-}
-.grid-item:hover #project7-3{
-	top:100%;
-	transition-delay: 0.30s;
-	opacity:0;
-}
-.grid-item:hover #project7-4{
-	top:100%;
-	transition-delay: 0.45s;
-	opacity:0;
-}
-#project7-1, #project7-2, #project7-3, #project7-4{
+.project7{
 	background-image: url("/project-img/weather.jpg");
+}
+.project-items-size{
 	background-size: 600px;
 	background-repeat: no-repeat;
 	width: 25%;
@@ -438,20 +163,37 @@ ul span{
 	z-index:0;
 	margin:0;
 }
-#project7-1{
+#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1{
 	background-position-x: 0;
 }
-#project7-2{
+#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2{
 	background-position-x: -150px;
 }
-#project7-3{
+#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3{
 	background-position-x: -300px;
 }
-#project7-4{
+#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
 	background-position-x: -450px;
 }
-/* item 7 in projects -end- */
-
+.grid-item:hover .first-image-part{
+	top:100%;
+	height: 0%;
+}
+.grid-item:hover .second-image-part{
+	top:100%;
+	height: 0%;
+	transition-delay: 0.15s;
+}
+.grid-item:hover .third-image-part{
+	top:100%;
+	height: 0%;
+	transition-delay: 0.30s;
+}
+.grid-item:hover .fourth-image-part{
+	top:100%;
+	height: 0%;
+	transition-delay: 0.45s;
+}
 /*projects end*/	
 /*navigation end*/
 /*about start*/
@@ -562,10 +304,7 @@ footer{
 	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
 		background-position-x: -337.5px;
 	}
-	#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1,
-	#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2,
-	#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3,
-	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
+	.project-items-size{
 		background-size: 450px;
 	}
 }
@@ -604,10 +343,7 @@ footer{
 	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
 		background-position-x: -450px;
 	}
-	#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1,
-	#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2,
-	#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3,
-	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
+	.project-items-size{
 		background-size: 600px;
 	}
 	
@@ -688,10 +424,7 @@ footer{
 	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
 		background-position-x: -337.5px;
 	}
-	#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1,
-	#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2,
-	#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3,
-	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
+	.project-items-size{
 		background-size: 450px;
 	}
 	
@@ -718,10 +451,7 @@ footer{
 	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
 		background-position-x: -337.5px;
 	}
-	#project1-1, #project2-1, #project3-1, #project4-1, #project5-1, #project6-1, #project7-1,
-	#project1-2, #project2-2, #project3-2, #project4-2, #project5-2, #project6-2, #project7-2,
-	#project1-3, #project2-3, #project3-3, #project4-3, #project5-3, #project6-3, #project7-3,
-	#project1-4, #project2-4, #project3-4, #project4-4, #project5-4, #project6-4, #project7-4{
+	.project-items-size{
 		background-size: 450px;
 	}
 }

@@ -2,7 +2,7 @@
   "name": "caffe-pos",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://emirm990.github.io/vjezbe/caffe-pos",
+  "homepage": "https://emirm990.github.io/caffe-pos",
   "dependencies": {
     "bootstrap": "^4.2.1",
     "react": "^16.7.0",

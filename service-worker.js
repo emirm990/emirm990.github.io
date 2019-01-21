@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/vjezbe/caffe-pos/precache-manifest.9c21e4796bc52e8be6b898a650940fbb.js"
+  "/caffe-pos/precache-manifest.00d75c8fc47ae016fe90366eea135c6f.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/vjezbe/caffe-pos/index.html", {
+workbox.routing.registerNavigationRoute("/caffe-pos/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

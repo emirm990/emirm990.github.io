@@ -78,6 +78,9 @@ main {
 }
 .flex-card-back h1 {
   margin-top: 0;
+}
+.flex-card-back h1,
+p {
   flex-basis: 100%;
 }
 /*navigation start*/

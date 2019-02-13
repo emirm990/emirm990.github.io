@@ -16,7 +16,69 @@ body {
 main {
   margin: 0 auto;
   background-color: var(--main-color);
-  padding-bottom: 10px;
+  padding-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+/*flip card*/
+
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 300px;
+  perspective: 750px; /* Remove this if you don't want the 3D effect */
+  margin-bottom: 25px;
+}
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+}
+/* Style the back side */
+.flip-card-back {
+  background-color: var(--body-color);
+  color: black;
+  font-size: 1.2em;
+  transform: rotateY(180deg);
+}
+.flex-card-back {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+}
+.flex-card-back h1 {
+  margin-top: 0;
+  flex-basis: 100%;
 }
 /*navigation start*/
 nav {
@@ -68,164 +130,7 @@ ul span {
   width: 0%;
   background-color: rgb(240, 234, 218);
 }
-/*projects start*/
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
-  justify-content: center;
-  column-gap: 15px;
-}
-.grid-item {
-  position: relative;
-  width: 600px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-}
-.grid-item img {
-  max-width: 100%;
-}
-.grid-overlay {
-  display: block;
-  height: 0%;
-  width: 100%;
-  background-color: rgb(240, 234, 218, 0.9);
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  padding: 10px 10px 10px 0;
-  transition: all 0.5s ease-in;
-  z-index: 5;
-}
-.grid-overlay p {
-  padding: 10px;
-}
-.grid-overlay-button {
-  position: absolute;
-  padding: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  border: none;
-  background-color: var(--body-color);
-  transition: all 0.5s ease-in;
-}
-.grid-overlay-button:hover {
-  border: none;
-  box-shadow: 0 0 7px 7px var(--main-color) inset, 0 0 15px 15px var(--nav-color) inset;
-}
-.grid-overlay-button a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 15px 0 15px 0;
-}
-.grid-item:hover .grid-overlay {
-  opacity: 1;
-  height: 100%;
-  transition-delay: 0.45s;
-}
-.grid-item:hover .grid-overlay-button {
-  display: block;
-}
-.project1 {
-  background-image: url("/project-img/movies-and-tv.jpg");
-}
-.project2 {
-  background-image: url("/project-img/display.jpg");
-}
-.project3 {
-  background-image: url("/project-img/to-to-list.jpg");
-}
-.project4 {
-  background-image: url("/project-img/user-location.jpg");
-}
-.project5 {
-  background-image: url("/project-img/drawing-board.jpg");
-}
-.project6 {
-  background-image: url("/project-img/random-quotes.jpg");
-}
-.project7 {
-  background-image: url("/project-img/weather.jpg");
-}
-.project8 {
-  background-image: url("/project-img/caffe-pos.jpg");
-}
-.project-items-size {
-  background-size: 600px;
-  background-repeat: no-repeat;
-  width: 25%;
-  height: 100%;
-  position: relative;
-  top: 0px;
-  transition: all 0.5s ease-in;
-  z-index: 0;
-  margin: 0;
-}
-#project1-1,
-#project2-1,
-#project3-1,
-#project4-1,
-#project5-1,
-#project6-1,
-#project7-1,
-#project8-1 {
-  background-position-x: 0;
-}
-#project1-2,
-#project2-2,
-#project3-2,
-#project4-2,
-#project5-2,
-#project6-2,
-#project7-2,
-#project8-2 {
-  background-position-x: -150px;
-}
-#project1-3,
-#project2-3,
-#project3-3,
-#project4-3,
-#project5-3,
-#project6-3,
-#project7-3,
-#project8-3 {
-  background-position-x: -300px;
-}
-#project1-4,
-#project2-4,
-#project3-4,
-#project4-4,
-#project5-4,
-#project6-4,
-#project7-4,
-#project8-4 {
-  background-position-x: -450px;
-}
-.grid-item:hover .first-image-part {
-  top: 100%;
-  height: 0%;
-}
-.grid-item:hover .second-image-part {
-  top: 100%;
-  height: 0%;
-  transition-delay: 0.15s;
-}
-.grid-item:hover .third-image-part {
-  top: 100%;
-  height: 0%;
-  transition-delay: 0.3s;
-}
-.grid-item:hover .fourth-image-part {
-  top: 100%;
-  height: 0%;
-  transition-delay: 0.45s;
-}
-/*projects end*/
-/*navigation end*/
+/*navigation end */
 /*about start*/
 .fa-github {
   font-size: 300%;
@@ -254,7 +159,7 @@ ul span {
   opacity: 0;
   background-color: var(--body-color);
   transition: 0.5s;
-  width: 51%;
+  width: 100%;
   border-radius: 5px;
   margin: 0 auto;
   z-index: 10;
@@ -262,7 +167,7 @@ ul span {
 #about .imgOverlay:hover {
   opacity: 1;
 }
-#about a {
+.imgOverlay a {
   position: relative;
   top: 45%;
 }
@@ -272,322 +177,12 @@ ul span {
 #about i:hover {
   color: blue;
 }
-/*about end*/
-/*tooltip*/
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: var(--nav-color);
-  color: var(--main-color);
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  width: 120px;
-  top: 100%;
-  left: 50%;
-  margin-left: -60px;
-  position: absolute;
-  z-index: 1;
-}
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-/*tooltip end*/
-
-/*footer start*/
-footer {
-  text-align: center;
-  background-color: var(--nav-color);
+.about-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  padding-right: 10%;
 }
 
-/*footer end*/
-/*grid placement*/
-
-/*grid placement ends*/
-.practice-about {
-  padding: 100px;
-}
-@media only screen and (max-width: 1200px) {
-  main {
-    width: 100%;
-  }
-  .grid-item {
-    width: 450px;
-    height: 300px;
-  }
-  #project1-1,
-  #project2-1,
-  #project3-1,
-  #project4-1,
-  #project5-1,
-  #project6-1,
-  #project7-1,
-  #project8-1 {
-    background-position-x: 0;
-  }
-  #project1-2,
-  #project2-2,
-  #project3-2,
-  #project4-2,
-  #project5-2,
-  #project6-2,
-  #project7-2,
-  #project8-2 {
-    background-position-x: -112.5px;
-  }
-  #project1-3,
-  #project2-3,
-  #project3-3,
-  #project4-3,
-  #project5-3,
-  #project6-3,
-  #project7-3,
-  #project8-3 {
-    background-position-x: -225px;
-  }
-  #project1-4,
-  #project2-4,
-  #project3-4,
-  #project4-4,
-  #project5-4,
-  #project6-4,
-  #project7-4,
-  #project8-4 {
-    background-position-x: -337.5px;
-  }
-  .project-items-size {
-    background-size: 450px;
-  }
-}
-@media only screen and (max-width: 900px) {
-  #about {
-    width: 100%;
-    grid-template-areas:
-      "img"
-      "about";
-    grid-template-columns: 1fr;
-  }
-  #about img {
-    max-width: 20%;
-  }
-  nav ul {
-    width: 100%;
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-row-gap: 15px;
-  }
-  .grid-item {
-    width: 600px;
-    height: 400px;
-  }
-  #project1-1,
-  #project2-1,
-  #project3-1,
-  #project4-1,
-  #project5-1,
-  #project6-1,
-  #project7-1,
-  #project8-1 {
-    background-position-x: 0;
-  }
-  #project1-2,
-  #project2-2,
-  #project3-2,
-  #project4-2,
-  #project5-2,
-  #project6-2,
-  #project7-2,
-  #project8-2 {
-    background-position-x: -150px;
-  }
-  #project1-3,
-  #project2-3,
-  #project3-3,
-  #project4-3,
-  #project5-3,
-  #project6-3,
-  #project7-3,
-  #project8-3 {
-    background-position-x: -300px;
-  }
-  #project1-4,
-  #project2-4,
-  #project3-4,
-  #project4-4,
-  #project5-4,
-  #project6-4,
-  #project7-4,
-  #project8-4 {
-    background-position-x: -450px;
-  }
-  .project-items-size {
-    background-size: 600px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  #progressBar {
-    position: relative;
-    top: 25px;
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-row-gap: 15px;
-  }
-  nav {
-    height: 25px;
-  }
-  nav li {
-    display: block;
-    width: 100%;
-  }
-  nav ul {
-    display: none;
-    height: 25px;
-    position: relative;
-    top: 25px;
-  }
-  #nav-expand {
-    display: block;
-    z-index: 999;
-    position: fixed;
-    width: 100% !important;
-    right: 0;
-    top: 0;
-    border: none;
-    height: 25px;
-    width: 100px;
-    background-color: var(--nav-color);
-    font-size: 1.1em;
-    font-weight: bolder;
-    cursor: pointer;
-  }
-  .expand {
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-name: expand;
-  }
-  .block {
-    display: block;
-    height: 100px;
-  }
-  .shrink {
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-name: shrink;
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-row-gap: 15px;
-  }
-  .grid-item {
-    width: 450px;
-    height: 300px;
-  }
-  #project1-1,
-  #project2-1,
-  #project3-1,
-  #project4-1,
-  #project5-1,
-  #project6-1,
-  #project7-1,
-  #project8-1 {
-    background-position-x: 0;
-  }
-  #project1-2,
-  #project2-2,
-  #project3-2,
-  #project4-2,
-  #project5-2,
-  #project6-2,
-  #project7-2,
-  #project8-2 {
-    background-position-x: -112.5px;
-  }
-  #project1-3,
-  #project2-3,
-  #project3-3,
-  #project4-3,
-  #project5-3,
-  #project6-3,
-  #project7-3,
-  #project8-3 {
-    background-position-x: -225px;
-  }
-  #project1-4,
-  #project2-4,
-  #project3-4,
-  #project4-4,
-  #project5-4,
-  #project6-4,
-  #project7-4,
-  #project8-4 {
-    background-position-x: -337.5px;
-  }
-  .project-items-size {
-    background-size: 450px;
-  }
-}
-@media only screen and (max-width: 450px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-row-gap: 15px;
-  }
-  .grid-item {
-    width: 100vw;
-    height: 300px;
-  }
-  #project1-1,
-  #project2-1,
-  #project3-1,
-  #project4-1,
-  #project5-1,
-  #project6-1,
-  #project7-1,
-  #project8-1 {
-    background-position-x: 0;
-  }
-  #project1-2,
-  #project2-2,
-  #project3-2,
-  #project4-2,
-  #project5-2,
-  #project6-2,
-  #project7-2,
-  #project8-2 {
-    background-position-x: -112.5px;
-  }
-  #project1-3,
-  #project2-3,
-  #project3-3,
-  #project4-3,
-  #project5-3,
-  #project6-3,
-  #project7-3,
-  #project8-3 {
-    background-position-x: -225px;
-  }
-  #project1-4,
-  #project2-4,
-  #project3-4,
-  #project4-4,
-  #project5-4,
-  #project6-4,
-  #project7-4,
-  #project8-4 {
-    background-position-x: -337.5px;
-  }
-  .project-items-size {
-    background-size: 450px;
-  }
-}
+/*about end */

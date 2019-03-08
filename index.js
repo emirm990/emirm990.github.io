@@ -4,7 +4,7 @@ let navigationList = document.getElementById("nav-ul");
 let progressBar = document.getElementById("progressBar");
 let menuIcon = document.getElementById("menu-icon");
 
-navButton.addEventListener("click", function(){
+/*navButton.addEventListener("click", function(){
     navigationList.classList.toggle("block");
     navigation.classList.toggle("block");
 
@@ -16,14 +16,16 @@ navButton.addEventListener("click", function(){
         
     }
     //todo menuIcon.style.transform = "rotate(90deg)";
-})
+})*/
 
-function scrollbar(){
-    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrolled = (winScroll / height) * 100;
-    progressBar.style.width = scrolled + "%";
+function scrollbar() {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrolled = (winScroll / height) * 100;
+  progressBar.style.width = scrolled + "%";
 }
-window.onscroll = function(){
-    scrollbar();
-}
+window.onscroll = function() {
+  scrollbar();
+};

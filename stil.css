@@ -76,6 +76,14 @@ main {
   justify-content: center;
   height: 100%;
 }
+.flex-card-back i {
+  font-size: 1.5em;
+  transition: 0.2s color ease-in-out;
+  padding: 10px;
+}
+.flex-card-back i:hover {
+  color: blue;
+}
 .flex-card-back h1 {
   margin-top: 0;
 }
@@ -136,10 +144,7 @@ ul span {
 }
 /*navigation end */
 /*about start*/
-.fa-github {
-  font-size: 300%;
-  line-height: 0.3;
-}
+
 #about {
   width: 100%;
   display: grid;
@@ -177,16 +182,26 @@ ul span {
   position: relative;
   top: 45%;
 }
-#about p {
-  grid-area: about;
+#about i {
+  font-size: 3em;
+  line-height: 0.3;
+  transition: 0.2s color ease-in-out;
+  cursor: pointer;
 }
 #about i:hover {
   color: blue;
 }
+#about p {
+  grid-area: about;
+}
+
 .about-text {
   padding-right: 10%;
 }
-
+#contact address {
+  display: flex;
+  justify-content: space-between;
+}
 /*about end */
 @media only screen and (max-width: 800px) {
   #about img {
